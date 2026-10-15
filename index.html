@@ -1,0 +1,2705 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Naveen Book Seller – Books, Stationery, Toys, Poshaks & School Essentials</title>
+<meta name="description" content="Naveen Book Seller, Bazar Ganj Aonla (Bly) – Your one stop shop for learning, fun & everyday essentials." />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Poppins', 'sans-serif'],
+          script: ['Caveat', 'cursive'],
+        },
+        colors: {
+          navy: { DEFAULT: '#0b2a5b', dark: '#061a3d', light: '#16407f' },
+          brand: { DEFAULT: '#fbbf0f', dark: '#e5a900' },
+        },
+        keyframes: {
+          float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } },
+          slideDown: { from: { opacity: 0, transform: 'translateY(-8px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+          popIn: { from: { opacity: 0, transform: 'translateY(16px) scale(.97)' }, to: { opacity: 1, transform: 'translateY(0) scale(1)' } },
+        },
+        animation: {
+          float: 'float 4s ease-in-out infinite',
+          slideDown: 'slideDown .25s ease-out',
+          popIn: 'popIn .3s ease-out',
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  body { font-family: 'Poppins', sans-serif; }
+  .hero-bg {
+    background:
+      radial-gradient(circle at 20% 30%, rgba(255,255,255,.95) 0%, rgba(255,255,255,.75) 40%, rgba(255,247,224,.6) 100%),
+      repeating-linear-gradient(90deg, #d9b98a 0 14px, #c9a36e 14px 28px);
+  }
+  .spine { box-shadow: inset 0 -4px 0 rgba(0,0,0,.15), 0 6px 10px rgba(0,0,0,.18); }
+  .spine::after { content:''; position:absolute; right:14px; top:0; bottom:0; width:6px; border-left:2px solid #f6c453; border-right:2px solid #f6c453; opacity:.8; }
+  .shelf {
+    background:
+      repeating-linear-gradient(90deg, #c0392b 0 10px, #2e86c1 10px 18px, #f1c40f 18px 27px, #27ae60 27px 36px, #8e44ad 36px 44px, #e67e22 44px 54px, #1abc9c 54px 62px);
+  }
+  .torn { clip-path: polygon(0 4%, 3% 0, 8% 3%, 14% 0, 22% 2%, 30% 0, 40% 3%, 52% 0, 63% 2%, 74% 0, 85% 3%, 94% 0, 100% 3%, 100% 96%, 96% 100%, 88% 97%, 76% 100%, 64% 97%, 50% 100%, 38% 97%, 26% 100%, 14% 97%, 6% 100%, 0 96%); }
+  :focus-visible { outline: 3px solid #fbbf0f; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+
+<body class="bg-white text-slate-800 antialiased overflow-x-hidden">
+
+<!-- ================= NAVBAR ================= -->
+<header class="sticky top-0 z-50 bg-[#0b1530] text-white shadow-lg">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <div class="flex min-h-[76px] items-center justify-between gap-4">
+
+      <!-- Logo / Brand -->
+      <a href="index.html" class="flex min-w-0 items-center gap-3">
+        <div class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-amber-400 text-xl text-[#0b1530]">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <div class="min-w-0">
+          <h1 class="truncate text-lg font-extrabold sm:text-xl">
+            Naveen Book Seller
+          </h1>
+          <p class="text-xs text-gray-300">
+            Books • Stationery • School Essentials
+          </p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden items-center gap-6 lg:flex"
+           aria-label="Main navigation">
+         <a href="index.html" class="transition hover:text-amber-400">Home</a>
+         <a href="#about" class="transition hover:text-amber-400">About Us</a>
+        <a href="#products" class="transition hover:text-amber-400">Products</a>
+        <a href="#contact" class="transition hover:text-amber-400">Contact</a>
+      </nav>
+
+      <!-- Desktop Contact Buttons -->
+      <div class="hidden items-center gap-3 lg:flex">
+        <a href="tel:8881222660"
+           class="rounded-full border border-white/20 px-4 py-2 transition hover:bg-white/10">
+          <i class="fa-solid fa-phone mr-2"></i>Call
+        </a>
+
+        <a href="https://wa.me/918881222660"
+           target="_blank" rel="noopener noreferrer"
+           class="rounded-full bg-green-500 px-4 py-2 font-semibold text-white transition hover:bg-green-600">
+          <i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp
+        </a>
+      </div>
+
+      <!-- Mobile Toggle Button -->
+      <button
+        id="menuBtn"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+        class="grid h-11 w-11 shrink-0 place-items-center rounded-xl
+               border border-white/20 bg-white/10 text-white
+               transition hover:bg-amber-400 hover:text-[#0b1530]
+               focus:outline-none focus:ring-2 focus:ring-amber-400
+               lg:hidden">
+
+        <i id="iconOpen" class="fa-solid fa-bars text-xl"></i>
+        <i id="iconClose" class="fa-solid fa-xmark hidden text-xl"></i>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div
+    id="mobileMenu"
+    class="hidden border-t border-white/10 bg-[#0b1530] lg:hidden">
+
+    <nav class="mx-auto flex max-w-7xl flex-col px-4 py-3 sm:px-6"
+         aria-label="Mobile navigation">
+
+      <a href="index.html" class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10 hover:text-amber-400">
+        <i class="fa-solid fa-house mr-3 w-5"></i>Home
+      </a>
+
+      <a href="#products" class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10 hover:text-amber-400">
+        <i class="fa-solid fa-book mr-3 w-5"></i>Products
+      </a>
+
+      <a href="#about" class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10 hover:text-amber-400">
+        <i class="fa-solid fa-circle-info mr-3 w-5"></i>About Us
+      </a>
+
+      <a href="#contact" class="mobile-link rounded-lg px-4 py-3 transition hover:bg-white/10 hover:text-amber-400">
+        <i class="fa-solid fa-envelope mr-3 w-5"></i>Contact
+      </a>
+
+      <!-- Mobile Contact Buttons -->
+      <div class="mt-3 grid grid-cols-1 gap-3 border-t border-white/10 pt-4 sm:grid-cols-2">
+
+        <a href="tel:8881222660"
+           class="flex min-h-12 items-center justify-center gap-2 rounded-full bg-amber-400 px-4 py-3 font-semibold text-[#0b1530] transition hover:bg-amber-300">
+          <i class="fa-solid fa-phone"></i>Call Now
+        </a>
+
+        <a href="https://wa.me/918881222660"
+           target="_blank" rel="noopener noreferrer"
+           class="flex min-h-12 items-center justify-center gap-2 rounded-full bg-green-500 px-4 py-3 font-semibold text-white transition hover:bg-green-600">
+          <i class="fa-brands fa-whatsapp text-lg"></i>WhatsApp
+        </a>
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section id="home" class="hero-bg relative overflow-hidden">
+  <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-10 sm:px-6 lg:grid-cols-2 lg:py-14">
+    <!-- Left -->
+    <div class="relative z-10">
+      <p class="flex flex-wrap gap-x-2 text-xs font-medium text-slate-600 sm:text-sm">
+        <span>Books</span><span>|</span><span>Stationery</span><span>|</span><span>Toys</span><span>|</span><span>Poshaks &amp; Jewellery</span><span>|</span><span>School Dresses &amp; Shoes</span>
+      </p>
+      <h1 class="mt-3 text-5xl font-extrabold leading-[1.05] text-navy sm:text-6xl lg:text-7xl">
+        Naveen<br /><span class="text-brand">Book Seller</span>
+      </h1>
+      <p class="mt-4 font-script text-2xl font-semibold leading-snug text-navy sm:text-3xl">
+        Your One Stop Shop for Learning,<br />Fun &amp; Everyday Essentials
+      </p>
+
+      <div class="mt-6 grid gap-4 sm:grid-cols-3">
+        <div class="flex items-center gap-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-navy text-brand">👤</span>
+          <div class="text-xs leading-tight"><p class="text-slate-500">Contact Person</p><p class="text-sm font-bold text-navy">Mudit Agarwal</p></div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-navy text-brand">👤</span>
+          <div class="text-xs leading-tight"><p class="text-slate-500">Prop.</p><p class="text-sm font-bold text-navy">Krishna Gopal Agarwal</p></div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-navy text-brand">📞</span>
+          <div class="text-xs leading-tight"><p class="text-slate-500">Contact / WhatsApp</p><a href="tel:8881222660" class="text-sm font-bold text-navy hover:text-brand-dark">8881222660</a></div>
+        </div>
+      </div>
+
+      <div class="mt-5 flex flex-col gap-3 text-sm font-semibold text-navy sm:flex-row sm:flex-wrap sm:gap-8">
+        <a href="mailto:naveenbookseller72@gmail.com" class="flex items-center gap-2 transition hover:text-brand-dark break-all">
+          <span class="grid h-8 w-8 shrink-0 place-items-center rounded-md bg-navy text-white">✉</span>naveenbookseller72@gmail.com
+        </a>
+        <span class="flex items-center gap-2">
+          <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-navy text-brand">📍</span>Bazar Ganj Aonla ( Bly)
+        </span>
+      </div>
+
+      <a href="#products" class="group mt-7 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-bold text-navy shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-navy hover:text-brand hover:shadow-xl">
+        Explore Our Products
+        <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <!-- Right: book stack -->
+    <div class="relative mx-auto w-full max-w-xl lg:max-w-none">
+      <p class="absolute -top-2 right-0 z-20 hidden rotate-[-6deg] text-right font-script text-2xl font-bold leading-tight text-navy sm:block lg:right-4 lg:text-3xl">
+        Quality Products<br />Better Tomorrow <span class="text-brand">♡</span>
+      </p>
+
+      <div class="relative mt-10 flex items-end justify-center sm:mt-16">
+        <!-- stack -->
+        <div class="relative z-10 w-[72%] space-y-1">
+          <div class="spine relative h-9 rounded-sm bg-gradient-to-r from-pink-100 to-pink-200 px-4 text-sm font-semibold leading-9 text-pink-300">&nbsp;</div>
+          <div class="spine relative ml-3 h-10 rounded-sm bg-gradient-to-r from-amber-100 to-amber-200 px-4 text-base font-semibold leading-10 text-amber-500">Books</div>
+          <div class="spine relative -ml-1 h-11 rounded-sm bg-gradient-to-r from-sky-500 to-cyan-600 px-4 text-lg font-semibold leading-[44px] text-white transition hover:translate-x-2">Stationery</div>
+          <div class="spine relative ml-2 h-11 rounded-sm bg-gradient-to-r from-orange-500 to-red-500 px-4 text-lg font-semibold leading-[44px] text-white transition hover:translate-x-2">Toys</div>
+          <div class="spine relative -ml-2 h-11 rounded-sm bg-gradient-to-r from-indigo-700 to-purple-700 px-4 text-base font-semibold leading-[44px] text-white transition hover:translate-x-2 sm:text-lg">Poshaks &amp; Jewellery</div>
+          <div class="spine relative ml-1 h-12 rounded-sm bg-gradient-to-r from-indigo-800 to-blue-900 px-4 text-base font-semibold leading-[48px] text-white transition hover:translate-x-2 sm:text-lg">School Dresses &amp; Shoes</div>
+        </div>
+        <!-- pencils + bear -->
+        <div class="absolute bottom-0 right-0 z-20 flex items-end sm:right-2">
+          <span class="mb-6 text-6xl drop-shadow-lg sm:text-7xl">✏️</span>
+          <span class="animate-float text-[7rem] leading-none drop-shadow-xl sm:text-[9rem]">🧸</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= PREMIUM 3D ABOUT SECTION ================= -->
+<section id="about" class="about-section relative overflow-hidden bg-gradient-to-br from-white via-amber-50/50 to-blue-50/70 py-16 sm:py-20 lg:py-24">
+
+  <!-- Background decorative elements -->
+  <div class="pointer-events-none absolute -left-24 top-16 h-64 w-64 rounded-full bg-amber-200/30 blur-3xl"></div>
+  <div class="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-blue-200/30 blur-3xl"></div>
+
+  <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.95fr_1.15fr] lg:gap-16">
+
+    <!-- ========== LEFT: 3D BOOK VISUAL ========== -->
+    <div class="about-reveal group relative mx-auto w-full max-w-lg [perspective:1200px]">
+
+      <!-- Floating top badge -->
+      <div class="float-slow absolute -left-1 top-3 z-20 rounded-2xl border border-white/80 bg-white/90 px-4 py-3 shadow-xl backdrop-blur-md sm:-left-5 sm:top-8">
+        <div class="flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-amber-100 text-xl">📚</span>
+          <div>
+            <p class="text-xs font-bold text-slate-800">Knowledge First</p>
+            <p class="mt-0.5 text-[10px] text-slate-500">Books for every learner</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main 3D scene -->
+      <div class="book-scene relative mx-auto mt-8 grid min-h-[330px] place-items-center overflow-hidden rounded-[2rem] border border-white/80 bg-gradient-to-br from-amber-100 via-orange-50 to-blue-100 shadow-[0_25px_70px_-25px_rgba(30,41,59,0.28)] sm:min-h-[400px] sm:rounded-[2.5rem]">
+
+        <!-- Decorative circles -->
+        <div class="absolute h-64 w-64 rounded-full border border-white/70 sm:h-80 sm:w-80"></div>
+        <div class="absolute h-48 w-48 rounded-full border border-white/70 sm:h-64 sm:w-64"></div>
+
+        <!-- Floating icons -->
+        <span class="float-item absolute left-[12%] top-[23%] text-3xl sm:text-4xl">✏️</span>
+        <span class="float-item float-delay-1 absolute right-[13%] top-[22%] text-3xl sm:text-4xl">🎨</span>
+        <span class="float-item float-delay-2 absolute bottom-[24%] left-[13%] text-3xl sm:text-4xl">🧸</span>
+        <span class="float-item float-delay-1 absolute bottom-[20%] right-[12%] text-3xl sm:text-4xl">✨</span>
+
+        <!-- 3D book stack -->
+        <div class="book-stack relative z-10 flex items-center justify-center">
+          <div class="book book-blue absolute">
+            <div class="book-cover">
+              <span class="text-4xl sm:text-5xl">📘</span>
+              <span class="mt-2 text-xs font-black tracking-widest">LEARN</span>
+            </div>
+          </div>
+
+          <div class="book book-yellow absolute">
+            <div class="book-cover">
+              <span class="text-4xl sm:text-5xl">📒</span>
+              <span class="mt-2 text-xs font-black tracking-widest">CREATE</span>
+            </div>
+          </div>
+
+          <div class="book book-red absolute">
+            <div class="book-cover">
+              <span class="text-4xl sm:text-5xl">📕</span>
+              <span class="mt-2 text-xs font-black tracking-widest">GROW</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom label -->
+        <div class="absolute bottom-5 left-1/2 z-20 w-max max-w-[90%] -translate-x-1/2 rounded-full border border-white/80 bg-white/80 px-4 py-2 text-center text-xs font-bold text-slate-700 shadow-lg backdrop-blur-md sm:bottom-7 sm:px-5 sm:text-sm">
+          Every Book Opens a New World
+        </div>
+      </div>
+
+      <!-- Handwritten sticker -->
+      <div class="sticker absolute -bottom-5 right-2 z-30 rotate-6 rounded-xl bg-yellow-200 px-4 py-3 text-center font-bold text-slate-800 shadow-xl transition duration-500 hover:rotate-0 hover:scale-110 sm:right-5 sm:px-5 sm:py-4">
+        <p class="text-sm sm:text-base">Books ♡</p>
+        <p class="text-xs leading-relaxed sm:text-sm">Build Better<br>Futures!</p>
+      </div>
+
+      <!-- Floating quality badge -->
+      <div class="float-slow absolute -bottom-4 left-2 z-20 rounded-xl border border-white bg-white/95 px-3 py-2 shadow-lg sm:bottom-3 sm:left-0 sm:px-4 sm:py-3">
+        <p class="text-xs font-extrabold text-slate-800 sm:text-sm">💛 Made for Every Age</p>
+      </div>
+    </div>
+
+    <!-- ========== RIGHT: ABOUT CONTENT ========== -->
+    <div class="about-reveal about-copy pt-5 lg:pt-0">
+
+      <!-- Section label -->
+      <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-100/70 px-4 py-2">
+        <span class="h-2 w-2 animate-pulse rounded-full bg-amber-500"></span>
+        <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-amber-800">Discover Our Story</span>
+      </div>
+
+      <h2 class="text-3xl font-black leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+        Welcome to
+        <span class="about-heading block bg-gradient-to-r from-amber-600 via-orange-500 to-amber-700 bg-clip-text text-transparent">
+          Naveen Book Seller
+        </span>
+      </h2>
+
+      <div class="mt-5 h-1.5 w-20 overflow-hidden rounded-full bg-amber-100">
+        <div class="about-line h-full w-full origin-left rounded-full bg-gradient-to-r from-amber-500 to-orange-400"></div>
+      </div>
+
+      <p class="mt-6 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+        Your trusted destination in <strong class="text-slate-800">Aonla (Bly)</strong> for books, stationery, toys, poshaks, jewellery, and school essentials. We bring together quality, variety, and value to make every visit a delightful experience.
+      </p>
+
+      <p class="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8">
+        We believe that every child deserves the tools to learn, imagine, and grow. From classroom essentials to thoughtful gifts, we help families find the right products at the right price.
+      </p>
+
+      <!-- Feature cards -->
+      <div class="mt-7 grid grid-cols-1 gap-3 min-[420px]:grid-cols-2 sm:gap-4">
+
+        <div class="feature-card group flex items-start gap-3 rounded-2xl border border-amber-100 bg-white/80 p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:bg-white hover:shadow-xl">
+          <div class="feature-icon grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-amber-100 text-xl transition duration-300 group-hover:rotate-6 group-hover:scale-110">📚</div>
+          <div>
+            <h3 class="text-sm font-extrabold text-slate-800">Wide Variety</h3>
+            <p class="mt-1 text-xs leading-5 text-slate-500">Books and essentials for different needs.</p>
+          </div>
+        </div>
+
+        <div class="feature-card group flex items-start gap-3 rounded-2xl border border-blue-100 bg-white/80 p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-300 hover:bg-white hover:shadow-xl">
+          <div class="feature-icon grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-blue-100 text-xl transition duration-300 group-hover:-rotate-6 group-hover:scale-110">💝</div>
+          <div>
+            <h3 class="text-sm font-extrabold text-slate-800">For Every Age</h3>
+            <p class="mt-1 text-xs leading-5 text-slate-500">Learning, creativity, gifts and more.</p>
+          </div>
+        </div>
+
+        <div class="feature-card group flex items-start gap-3 rounded-2xl border border-emerald-100 bg-white/80 p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:bg-white hover:shadow-xl">
+          <div class="feature-icon grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-emerald-100 text-xl transition duration-300 group-hover:rotate-6 group-hover:scale-110">🤝</div>
+          <div>
+            <h3 class="text-sm font-extrabold text-slate-800">Customer Care</h3>
+            <p class="mt-1 text-xs leading-5 text-slate-500">Friendly service with a personal touch.</p>
+          </div>
+        </div>
+
+        <div class="feature-card group flex items-start gap-3 rounded-2xl border border-purple-100 bg-white/80 p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-purple-300 hover:bg-white hover:shadow-xl">
+          <div class="feature-icon grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-purple-100 text-xl transition duration-300 group-hover:-rotate-6 group-hover:scale-110">🎁</div>
+          <div>
+            <h3 class="text-sm font-extrabold text-slate-800">Something Special</h3>
+            <p class="mt-1 text-xs leading-5 text-slate-500">Discover useful items and lovely gifts.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-8 flex flex-col gap-3 min-[420px]:flex-row min-[420px]:items-center">
+        <a href="#contact" class="about-cta group inline-flex min-h-12 items-center justify-center gap-3 rounded-xl bg-slate-900 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-slate-900/20 transition duration-300 hover:-translate-y-1 hover:bg-amber-500 hover:text-slate-950 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-amber-300">
+          Know More
+          <span class="inline-block text-lg transition-transform duration-300 group-hover:translate-x-2">→</span>
+        </a>
+        <span class="text-center text-xs font-medium text-slate-500 min-[420px]:text-left">Your neighbourhood store for everyday essentials.</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT SECTION MOTION STYLES ========== -->
+<style>
+  .about-section {
+    isolation: isolate;
+  }
+
+  /* 3D stage */
+  .book-scene {
+    transform-style: preserve-3d;
+    transition: box-shadow 0.5s ease, border-color 0.5s ease;
+    animation: sceneFloat 6s ease-in-out infinite;
+  }
+
+  .about-section .group:hover .book-scene {
+    box-shadow: 0 35px 85px -25px rgba(180, 83, 9, 0.32);
+    border-color: rgba(251, 191, 36, 0.65);
+  }
+
+  .book-stack {
+    width: 190px;
+    height: 205px;
+    transform-style: preserve-3d;
+    transform: rotateX(5deg) rotateY(-12deg);
+    transition: transform 0.6s cubic-bezier(.2,.8,.2,1);
+  }
+
+  .about-section .group:hover .book-stack {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.06);
+  }
+
+  .book {
+    width: 126px;
+    height: 168px;
+    border-radius: 5px 12px 12px 5px;
+    box-shadow: 9px 12px 0 rgba(15, 23, 42, 0.12),
+                15px 20px 30px rgba(15, 23, 42, 0.20);
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(.2,.8,.2,1),
+                filter 0.4s ease;
+  }
+
+  .book::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: -7px;
+    width: 8px;
+    border-radius: 3px 0 0 3px;
+    background: repeating-linear-gradient(
+      to bottom,
+      #f8fafc 0px,
+      #f8fafc 2px,
+      #cbd5e1 3px,
+      #f8fafc 4px
+    );
+    transform: skewY(-3deg);
+  }
+
+  .book-cover {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: inherit;
+    color: white;
+    background: linear-gradient(145deg, var(--book-light), var(--book-dark));
+    box-shadow: inset 5px 0 10px rgba(255,255,255,.12);
+  }
+
+  .book-blue {
+    --book-light: #60a5fa;
+    --book-dark: #1d4ed8;
+    transform: translateX(-35px) translateY(9px) rotate(-13deg);
+    z-index: 1;
+  }
+
+  .book-yellow {
+    --book-light: #fcd34d;
+    --book-dark: #d97706;
+    transform: translateY(-8px) rotate(1deg) translateZ(12px);
+    z-index: 3;
+  }
+
+  .book-yellow .book-cover {
+    color: #78350f;
+  }
+
+  .book-red {
+    --book-light: #fb7185;
+    --book-dark: #be123c;
+    transform: translateX(35px) translateY(9px) rotate(13deg);
+    z-index: 2;
+  }
+
+  .about-section .group:hover .book-blue {
+    transform: translateX(-58px) translateY(1px) rotate(-19deg) translateZ(8px);
+  }
+
+  .about-section .group:hover .book-yellow {
+    transform: translateY(-23px) rotate(0deg) translateZ(30px);
+  }
+
+  .about-section .group:hover .book-red {
+    transform: translateX(58px) translateY(1px) rotate(19deg) translateZ(8px);
+  }
+
+  /* Floating decorations */
+  .float-item {
+    animation: floatItem 4s ease-in-out infinite;
+    filter: drop-shadow(0 6px 8px rgba(15,23,42,.12));
+  }
+
+  .float-delay-1 {
+    animation-delay: -1.2s;
+  }
+
+  .float-delay-2 {
+    animation-delay: -2.4s;
+  }
+
+  .float-slow {
+    animation: floatItem 5s ease-in-out infinite;
+  }
+
+  .sticker {
+    transform-origin: center;
+  }
+
+  /* Content entrance animation */
+  .about-reveal {
+    animation: aboutEnter 0.85s cubic-bezier(.2,.7,.2,1) both;
+  }
+
+  .about-copy {
+    animation-delay: 0.12s;
+  }
+
+  .about-heading {
+    background-size: 200% auto;
+    animation: headingShine 5s linear infinite;
+  }
+
+  .about-line {
+    animation: lineReveal 1.2s cubic-bezier(.2,.7,.2,1) both;
+    animation-delay: 0.4s;
+  }
+
+  .feature-card {
+    transform-style: preserve-3d;
+  }
+
+  .feature-card:hover .feature-icon {
+    box-shadow: 0 8px 18px rgba(15,23,42,.10);
+  }
+
+  @keyframes floatItem {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(5deg); }
+  }
+
+  @keyframes sceneFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  @keyframes aboutEnter {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes headingShine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes lineReveal {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  /* Smaller mobile screens */
+  @media (max-width: 420px) {
+    .book-stack {
+      transform: scale(.82) rotateX(5deg) rotateY(-12deg);
+    }
+
+    .about-section .group:hover .book-stack {
+      transform: scale(.86) rotateX(0deg) rotateY(0deg);
+    }
+
+    .book-scene {
+      min-height: 310px;
+    }
+
+    .book {
+      width: 108px;
+      height: 148px;
+    }
+
+    .sticker {
+      right: 0;
+      bottom: -22px;
+    }
+  }
+
+  /* Respect accessibility preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .about-section *,
+    .about-section *::before,
+    .about-section *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
+
+<!-- ================= PRODUCTS ================= -->
+<section id="products" class="bg-white py-12 sm:py-16">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="text-center">
+      <p class="flex items-center justify-center gap-3 text-sm font-semibold text-navy">
+        <span class="h-0.5 w-8 bg-navy"></span>Our Products<span class="h-0.5 w-8 bg-navy"></span>
+      </p>
+      <h2 class="mt-2 text-3xl font-extrabold text-navy sm:text-4xl">Explore Our Wide Range</h2>
+    </div>
+
+    <div class="mt-10 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-6">
+      <!-- card template repeated -->
+      
+<article class="group flex flex-col items-center rounded-2xl
+         border border-sky-200 bg-gradient-to-b
+         from-sky-50 to-sky-100 p-5 text-center
+         shadow-sm transition-all duration-300
+         hover:-translate-y-2 hover:border-sky-400
+         hover:shadow-xl">
+
+  <div class="grid h-28 w-full place-items-center">
+    <img
+      src="images/stationary.jpg"
+      alt="Stationery products"
+      loading="lazy"
+      class="h-28 w-28 object-contain
+             transition-transform duration-300
+             group-hover:scale-110
+             group-hover:-rotate-3"
+    />
+  </div>
+
+  <h3 class="mt-3 text-lg font-bold text-navy">
+    Stationery
+  </h3>
+
+  <p class="mt-1 text-xs text-slate-600">
+    Pens, notebooks & school supplies
+  </p>
+
+  <a
+    href="#stationery"
+    class="mt-4 inline-flex items-center gap-2
+           rounded-full bg-navy px-5 py-2.5
+           text-xs font-semibold text-white
+           transition-all duration-300
+           hover:bg-yellow-400 hover:text-navy
+           focus-visible:outline-2
+           focus-visible:outline-offset-2
+           focus-visible:outline-navy">
+    View More
+    <span class="transition-transform duration-300
+                 group-hover:translate-x-1">→</span>
+  </a>
+
+</article>
+
+<article class="group flex flex-col items-center rounded-2xl
+  bg-rose-50 p-5 text-center
+  ring-1 ring-rose-200/80
+  transition-all duration-300
+  hover:-translate-y-2 hover:bg-white
+  hover:shadow-xl hover:shadow-rose-200/50">
+
+  <div class="grid h-32 w-full place-items-center overflow-hidden rounded-xl bg-white">
+    <img
+      src="images/toys.jpg"
+      alt="Colorful toys for children"
+      loading="lazy"
+      class="h-28 w-28 object-contain
+      transition-transform duration-500
+      group-hover:scale-110"
+    />
+  </div>
+
+  <h3 class="mt-3 text-lg font-bold text-navy">
+    Toys
+  </h3>
+
+  
+  <p class="mt-1 text-xs text-slate-600">
+    Fun & educational toys for kids
+  </p>
+
+  <a href="#toys"
+    class="mt-3 inline-flex items-center gap-2
+    rounded-full bg-navy px-5 py-2.5
+    text-xs font-semibold text-white
+    transition-all duration-300
+    hover:bg-brand hover:text-navy">
+   View More
+    <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+  </a>
+</article>
+
+      
+<article class="group flex flex-col items-center rounded-2xl
+  border border-emerald-200 bg-gradient-to-br from-emerald-50
+  to-emerald-100 p-5 text-center shadow-sm
+  transition-all duration-300
+  hover:-translate-y-2 hover:border-emerald-400
+  hover:shadow-xl">
+
+  <div class="grid h-28 w-full place-items-center
+    rounded-xl bg-white/70 text-6xl
+    transition-transform duration-300
+    group-hover:scale-110 group-hover:-rotate-3">
+    <img src="images/books.jpg"
+      alt="Stack of books"
+      loading="lazy"
+      class="h-28 w-28 object-contain">
+  </div>
+
+  <h3 class="mt-4 text-lg font-bold text-navy ">
+    Books
+  </h3>
+
+  <p class="mt-1 text-xs text-slate-600">
+    Knowledge for a Brighter Future
+  </p>
+
+  <a href="#books"
+    class="mt-4 inline-flex items-center gap-2 rounded-full
+    bg-teal-700 px-5 py-2.5 text-xs font-semibold text-white
+    transition-all duration-300
+    hover:bg-yellow-400 hover:text-slate-900
+    focus:outline-none focus:ring-2 focus:ring-teal-500">
+    View More
+    <span class="transition-transform duration-300
+      group-hover:translate-x-1">→</span>
+  </a>
+</article>
+
+
+<article class="group flex flex-col items-center rounded-2xl
+                bg-gradient-to-br from-purple-50 to-purple-100
+                p-4 text-center ring-1 ring-purple-200
+                shadow-sm transition-all duration-300
+                hover:-translate-y-2 hover:shadow-xl
+                hover:ring-purple-400">
+
+  <!-- Product Icon -->
+  <div class="grid h-28 w-full place-items-center
+              text-6xl transition-transform duration-300
+              group-hover:scale-110 group-hover:rotate-3">
+    <img src="images/poshaks.jpg"
+         alt="Traditional poshaks and jewellery"
+         loading="lazy"
+         class="h-28 w-28 object-contain" />
+  </div>
+
+  <!-- Category Title -->
+  <h3 class="mt-3 font-bold text-navy">
+    Poshaks &amp; Jewellery
+  </h3>
+
+  <p class="mt-2 text-xs text-gray-600">
+    Traditional Wear &amp; Beautiful Accessories
+  </p>
+
+  <!-- Button -->
+  <a href="#poshaks"
+     class="mt-4 inline-flex items-center gap-2 rounded-full
+            bg-navy px-5 py-2.5 text-xs font-semibold text-white
+            transition-all duration-300
+            hover:bg-brand hover:text-navy
+            hover:shadow-md">
+    View More
+    <span class="transition-transform duration-300
+                 group-hover:translate-x-1">→</span>
+  </a>
+
+</article>
+
+
+<article class="group flex flex-col items-center rounded-2xl
+         bg-cyan-50 p-4 text-center
+         ring-1 ring-cyan-200
+         transition-all duration-300
+         hover:-translate-y-2 hover:shadow-xl hover:bg-white">
+
+  <!-- Product Image -->
+  <div class="grid h-32 w-full place-items-center overflow-hidden rounded-xl">
+    <img
+      src="images/dresses.jpg"
+      alt="School uniforms for boys and girls"
+      class="h-full w-full object-contain
+             transition-transform duration-500
+             group-hover:scale-110"
+      loading="lazy">
+  </div>
+
+  <!-- Product Title -->
+  <h3 class="mt-3 font-bold text-navy">
+    School Dresses
+  </h3>
+
+   <p class="mt-1 text-xs text-slate-600">
+    Comfortable &amp; Durable Uniforms
+  </p>
+
+  <!-- View More Button -->
+  <a
+    href="#dresses"
+    class="mt-4 inline-flex items-center gap-2
+           rounded-full bg-navy px-5 py-2
+           text-xs font-semibold text-white
+           transition-all duration-300
+           hover:bg-brand hover:text-navy
+           group-hover:shadow-md">
+    View More
+    <span class="transition-transform duration-300
+                 group-hover:translate-x-1">→</span>
+  </a>
+</article>
+
+<article class="group flex flex-col items-center rounded-2xl
+  border border-amber-200 bg-amber-50 p-5 text-center
+  shadow-sm transition-all duration-300
+  hover:-translate-y-2 hover:border-amber-400
+  hover:bg-amber-100 hover:shadow-xl">
+
+  <div class="grid h-32 w-full place-items-center overflow-hidden">
+    <img
+      src="images/school shoes.jpg"
+      alt="School shoes for boys and girls"
+      loading="lazy"
+      class="h-28 w-28 object-contain
+      transition-transform duration-300
+      group-hover:scale-110"
+    >
+  </div>
+
+  <h3 class="mt-3 text-base font-bold text-navy">
+    School Shoes
+  </h3>
+
+  <p class="mt-1 text-xs text-gray-600">
+    Comfortable shoes for every school day
+  </p>
+
+  <a
+    href="#shoes"
+    class="mt-4 inline-flex items-center gap-2
+    rounded-full bg-navy px-5 py-2.5
+    text-xs font-semibold text-white
+    transition-all duration-300
+    hover:bg-amber-400 hover:text-navy"
+  >
+    View More <span aria-hidden="true">→</span>
+  </a>
+
+</article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT CATEGORIES SECTION -->
+<section id="products" class="relative overflow-hidden bg-gradient-to-b from-blue-50 via-white to-yellow-50 py-20 sm:py-24">
+
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+
+    <!-- Section Heading -->
+    <div class="mx-auto mb-14 max-w-2xl text-center">
+      <span class="inline-block rounded-full bg-yellow-100 px-5 py-2 text-sm font-bold uppercase tracking-widest text-blue-900">
+        ✨ Explore Our Collection
+      </span>
+
+      <h2 class="mt-5 text-3xl font-extrabold tracking-tight text-blue-950 sm:text-4xl lg:text-5xl">
+        Everything You Need,
+        <span class="text-yellow-500">Under One Roof!</span>
+      </h2>
+
+      <p class="mx-auto mt-5 max-w-xl text-base leading-7 text-gray-600 sm:text-lg">
+        Discover quality books, stationery, toys, school uniforms and more
+        at Naveen Book Seller, Aonla.
+      </p>
+
+      <div class="mx-auto mt-6 h-1.5 w-24 rounded-full bg-yellow-400"></div>
+    </div>
+
+    <!-- Product Category Cards -->
+    <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Stationery -->
+      <article id="stationery" class="group relative overflow-hidden rounded-3xl border border-blue-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:border-blue-300 hover:shadow-2xl">
+        <div class="relative h-60 overflow-hidden bg-blue-100">
+          <img
+            src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=85"
+            alt="Stationery and writing supplies"
+            loading="lazy"
+            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <span class="absolute left-4 top-4 rounded-full bg-blue-900 px-4 py-2 text-xs font-bold text-white shadow-lg">Everyday Essentials</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-blue-950/70 via-transparent to-transparent"></div>
+          <h3 class="absolute bottom-5 left-6 text-2xl font-extrabold text-white">Stationery</h3>
+        </div>
+        <div class="p-6">
+          <p class="leading-7 text-gray-600">Pens, pencils, notebooks, art materials, files and all your school and office essentials.</p>
+          <button onclick="openProductEnquiry('Stationery')" class="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-blue-900 px-5 py-3.5 font-bold text-white transition-all duration-300 hover:bg-yellow-400 hover:text-blue-950">
+            Enquire Now <span class="transition-transform group-hover:translate-x-1">→</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Toys -->
+      <article id="toys" class="group relative overflow-hidden rounded-3xl border border-pink-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:border-pink-300 hover:shadow-2xl">
+        <div class="relative h-60 overflow-hidden bg-pink-100">
+          <img
+            src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?auto=format&fit=crop&w=900&q=85"
+            alt="Colourful toys and building blocks"
+            loading="lazy"
+            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <span class="absolute left-4 top-4 rounded-full bg-pink-600 px-4 py-2 text-xs font-bold text-white shadow-lg">Fun & Learning</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-pink-950/70 via-transparent to-transparent"></div>
+          <h3 class="absolute bottom-5 left-6 text-2xl font-extrabold text-white">Toys</h3>
+        </div>
+        <div class="p-6">
+          <p class="leading-7 text-gray-600">Discover playful gifts, games, soft toys and fun learning products for children.</p>
+          <button onclick="openProductEnquiry('Toys')" class="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-pink-600 px-5 py-3.5 font-bold text-white transition-all duration-300 hover:bg-yellow-400 hover:text-blue-950">
+            Enquire Now <span class="transition-transform group-hover:translate-x-1">→</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Books -->
+      <article id="books" class="group relative overflow-hidden rounded-3xl border border-emerald-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:border-emerald-300 hover:shadow-2xl">
+        <div class="relative h-60 overflow-hidden bg-emerald-100">
+          <img
+            src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=85"
+            alt="Bookshelves filled with books"
+            loading="lazy"
+            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <span class="absolute left-4 top-4 rounded-full bg-emerald-700 px-4 py-2 text-xs font-bold text-white shadow-lg">Knowledge Corner</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/70 via-transparent to-transparent"></div>
+          <h3 class="absolute bottom-5 left-6 text-2xl font-extrabold text-white">Books</h3>
+        </div>
+        <div class="p-6">
+          <p class="leading-7 text-gray-600">Explore school books, educational resources, storybooks and reading essentials.</p>
+          <button onclick="openProductEnquiry('Books')" class="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-700 px-5 py-3.5 font-bold text-white transition-all duration-300 hover:bg-yellow-400 hover:text-blue-950">
+            Enquire Now <span class="transition-transform group-hover:translate-x-1">→</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Poshaks & Jewellery -->
+      <article id="poshaks" class="group relative overflow-hidden rounded-3xl border border-purple-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:border-purple-300 hover:shadow-2xl">
+        <div class="relative h-60 overflow-hidden bg-purple-100">
+          <img
+            src="https://images.unsplash.com/photo-1603400521630-9f2de124b33b?auto=format&fit=crop&w=900&q=85"
+            alt="Traditional clothing and fashion accessories"
+            loading="lazy"
+            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <span class="absolute left-4 top-4 rounded-full bg-purple-700 px-4 py-2 text-xs font-bold text-white shadow-lg">Traditional Collection</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-purple-950/70 via-transparent to-transparent"></div>
+          <h3 class="absolute bottom-5 left-6 text-2xl font-extrabold text-white">Poshaks & Jewellery</h3>
+        </div>
+        <div class="p-6">
+          <p class="leading-7 text-gray-600">Browse traditional poshaks, decorative accessories and jewellery for special occasions.</p>
+          <button onclick="openProductEnquiry('Poshaks & Jewellery')" class="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-purple-700 px-5 py-3.5 font-bold text-white transition-all duration-300 hover:bg-yellow-400 hover:text-blue-950">
+            Enquire Now <span class="transition-transform group-hover:translate-x-1">→</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- School Dresses -->
+      <article id="dresses" class="group relative overflow-hidden rounded-3xl border border-cyan-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:border-cyan-300 hover:shadow-2xl">
+        <div class="relative h-60 overflow-hidden bg-cyan-100">
+          <img
+            src="https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=900&q=85"
+            alt="School clothing and uniforms"
+            loading="lazy"
+            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <span class="absolute left-4 top-4 rounded-full bg-cyan-700 px-4 py-2 text-xs font-bold text-white shadow-lg">Back to School</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-cyan-950/70 via-transparent to-transparent"></div>
+          <h3 class="absolute bottom-5 left-6 text-2xl font-extrabold text-white">School Dresses</h3>
+        </div>
+        <div class="p-6">
+          <p class="leading-7 text-gray-600">Find school uniforms and everyday schoolwear for a comfortable school day.</p>
+          <button onclick="openProductEnquiry('School Dresses')" class="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-700 px-5 py-3.5 font-bold text-white transition-all duration-300 hover:bg-yellow-400 hover:text-blue-950">
+            Enquire Now <span class="transition-transform group-hover:translate-x-1">→</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- School Shoes -->
+      <article id="shoes" class="group relative overflow-hidden rounded-3xl border border-orange-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:border-orange-300 hover:shadow-2xl">
+        <div class="relative h-60 overflow-hidden bg-orange-100">
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
+            alt="Footwear collection"
+            loading="lazy"
+            class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <span class="absolute left-4 top-4 rounded-full bg-orange-600 px-4 py-2 text-xs font-bold text-white shadow-lg">Comfort & Style</span>
+          <div class="absolute inset-0 bg-gradient-to-t from-orange-950/70 via-transparent to-transparent"></div>
+          <h3 class="absolute bottom-5 left-6 text-2xl font-extrabold text-white">School Shoes</h3>
+        </div>
+        <div class="p-6">
+          <p class="leading-7 text-gray-600">Explore everyday footwear options designed for school routines and daily comfort.</p>
+          <button onclick="openProductEnquiry('School Shoes')" class="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-orange-600 px-5 py-3.5 font-bold text-white transition-all duration-300 hover:bg-yellow-400 hover:text-blue-950">
+            Enquire Now <span class="transition-transform group-hover:translate-x-1">→</span>
+          </button>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="mt-14 rounded-3xl bg-blue-950 px-6 py-10 text-center shadow-xl sm:px-12">
+      <h3 class="text-2xl font-extrabold text-white sm:text-3xl">
+        Looking for Something Special?
+      </h3>
+      <p class="mx-auto mt-3 max-w-xl leading-7 text-blue-100">
+        Contact our team for product availability, school essentials and enquiries.
+      </p>
+      <button
+        onclick="openProductEnquiry('General Enquiry')"
+        class="mt-7 inline-flex items-center gap-2 rounded-full bg-yellow-400 px-8 py-4 font-extrabold text-blue-950 transition-all duration-300 hover:scale-105 hover:bg-white"
+      >
+        Send an Enquiry <span>→</span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 3D Product Enquiry Popup -->
+<div id="productEnquiryModal"
+  class="fixed inset-0 z-[100] hidden items-center justify-center
+         overflow-hidden bg-blue-950/80 p-4 backdrop-blur-xl">
+
+  <!-- Animated background glow -->
+  <div class="enquiry-glow enquiry-glow-one"></div>
+  <div class="enquiry-glow enquiry-glow-two"></div>
+
+  <div id="enquiryCard"
+    class="enquiry-card relative max-h-[92vh] w-full max-w-lg
+           overflow-y-auto rounded-[28px] border border-white/70
+           bg-white/95 p-6 shadow-2xl sm:p-8">
+
+    <!-- Decorative floating books -->
+    <div class="floating-book book-one">📚</div>
+    <div class="floating-book book-two">✏️</div>
+
+    <!-- Close button -->
+    <button onclick="closeProductEnquiry()"
+      aria-label="Close enquiry form"
+      class="absolute right-4 top-4 z-10 flex h-10 w-10
+             items-center justify-center rounded-full
+             bg-slate-100 text-2xl text-slate-600
+             transition duration-300 hover:rotate-90
+             hover:bg-red-500 hover:text-white">
+      &times;
+    </button>
+
+    <!-- Brand badge -->
+    <div class="relative z-[1]">
+      <div class="mb-5 flex items-center gap-3">
+        <div class="brand-icon flex h-14 w-14 shrink-0 items-center
+                    justify-center rounded-2xl text-3xl shadow-lg">
+          📚
+        </div>
+
+        <div>
+          <span class="text-xs font-extrabold uppercase
+                       tracking-[0.2em] text-amber-600">
+            Naveen Book Seller
+          </span>
+          <p class="mt-1 text-xs text-slate-500">
+            Books • Learning • Everyday Essentials
+          </p>
+        </div>
+      </div>
+
+      <span class="inline-flex items-center gap-2 rounded-full
+                   bg-blue-50 px-3 py-1.5 text-xs font-bold text-blue-800">
+        <span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
+        WE'RE HERE TO HELP
+      </span>
+
+      <h3 class="mt-4 text-3xl font-black tracking-tight text-blue-950
+                 sm:text-4xl">
+        Let's Find Your
+        <span class="heading-gradient">Perfect Product!</span>
+      </h3>
+
+      <p class="mt-3 text-sm leading-6 text-slate-600">
+        Tell us what you need. Our team will help you with
+        product details, availability and pricing.
+      </p>
+
+      <!-- Trust highlights -->
+      <div class="mt-5 grid grid-cols-3 gap-2">
+        <div class="mini-feature">📖 <span>Books</span></div>
+        <div class="mini-feature">🎨 <span>Stationery</span></div>
+        <div class="mini-feature">🎒 <span>School Needs</span></div>
+      </div>
+
+      <form id="productEnquiryForm" class="mt-6 space-y-4">
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label for="enquiryName"
+              class="mb-2 block text-xs font-bold text-slate-700">
+              Your Name *
+            </label>
+            <input id="enquiryName" type="text"
+              placeholder="Enter your name" autocomplete="name"
+              required
+              class="enquiry-input w-full rounded-xl border
+                     border-slate-200 bg-white px-4 py-3.5
+                     text-sm outline-none transition-all duration-300
+                     focus:-translate-y-0.5 focus:border-blue-500
+                     focus:ring-4 focus:ring-blue-100">
+          </div>
+
+          <div>
+            <label for="enquiryPhone"
+              class="mb-2 block text-xs font-bold text-slate-700">
+              Phone Number *
+            </label>
+            <input id="enquiryPhone" type="tel"
+              placeholder="Your phone number"
+              autocomplete="tel"
+              pattern="[0-9+() -]{7,20}" required
+              class="enquiry-input w-full rounded-xl border
+                     border-slate-200 bg-white px-4 py-3.5
+                     text-sm outline-none transition-all duration-300
+                     focus:-translate-y-0.5 focus:border-blue-500
+                     focus:ring-4 focus:ring-blue-100">
+          </div>
+        </div>
+
+        <div>
+          <label for="enquiryEmail"
+            class="mb-2 block text-xs font-bold text-slate-700">
+            Email Address <span class="font-normal text-slate-400">(Optional)</span>
+          </label>
+          <input id="enquiryEmail" type="email"
+            placeholder="you@example.com" autocomplete="email"
+            class="enquiry-input w-full rounded-xl border
+                   border-slate-200 bg-white px-4 py-3.5
+                   text-sm outline-none transition-all duration-300
+                   focus:-translate-y-0.5 focus:border-blue-500
+                   focus:ring-4 focus:ring-blue-100">
+        </div>
+
+        <div>
+          <label for="enquiryProduct"
+            class="mb-2 block text-xs font-bold text-slate-700">
+            What Are You Looking For? *
+          </label>
+          <select id="enquiryProduct" required
+            class="enquiry-input w-full appearance-none rounded-xl
+                   border border-slate-200 bg-white px-4 py-3.5
+                   text-sm outline-none transition-all duration-300
+                   focus:-translate-y-0.5 focus:border-blue-500
+                   focus:ring-4 focus:ring-blue-100">
+            <option value="">Choose a product category</option>
+            <option>Stationery</option>
+            <option>Toys</option>
+            <option>Books</option>
+            <option>Poshaks & Jewellery</option>
+            <option>School Dresses</option>
+            <option>School Shoes</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="enquiryMessage"
+            class="mb-2 block text-xs font-bold text-slate-700">
+            Your Message
+          </label>
+          <textarea id="enquiryMessage" rows="3"
+            placeholder="Product name, quantity, class or size..."
+            class="enquiry-input w-full resize-y rounded-xl border
+                   border-slate-200 bg-white px-4 py-3.5
+                   text-sm outline-none transition-all duration-300
+                   focus:-translate-y-0.5 focus:border-blue-500
+                   focus:ring-4 focus:ring-blue-100"></textarea>
+        </div>
+
+        <!-- WhatsApp CTA -->
+        <button type="submit"
+          class="whatsapp-3d group relative flex w-full
+                 items-center justify-center gap-3 overflow-hidden
+                 rounded-2xl px-5 py-4 font-extrabold text-white
+                 shadow-xl transition duration-300
+                 hover:-translate-y-1 active:translate-y-1">
+          <span class="button-shine"></span>
+          <svg class="relative z-[1] h-6 w-6" viewBox="0 0 24 24"
+            fill="currentColor" aria-hidden="true">
+            <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .1 5.4.1 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6a12 12 0 0 0 5.9 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.7-8.4ZM12.1 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12.1 21.8Zm5.4-7.3c-.3-.2-1.7-.9-2-.9s-.5-.2-.7.2c-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6s-.7-1.7-.9-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.2 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
+          </svg>
+          <span class="relative z-[1]">Send Enquiry on WhatsApp</span>
+          <span class="relative z-[1] text-xl transition-transform
+                       group-hover:translate-x-1">→</span>
+        </button>
+
+        <p class="text-center text-xs leading-5 text-slate-500">
+          🔒 Your details will be included in your WhatsApp enquiry.
+          You can review and send the message there.
+        </p>
+      </form>
+
+      <div class="mt-5 flex items-center justify-center gap-2
+                  border-t border-slate-100 pt-4 text-xs text-slate-500">
+        <span>📍</span>
+        Bazar Ganj, Aonla (Bly)
+        <span class="text-slate-300">|</span>
+        <a href="tel:8881222660"
+          class="font-bold text-blue-800 hover:text-amber-600">
+          Call Us
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Ambient light */
+  .enquiry-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: .45;
+    pointer-events: none;
+    animation: glowDrift 7s ease-in-out infinite alternate;
+  }
+
+  .enquiry-glow-one {
+    top: 5%;
+    left: -100px;
+    background: #2563eb;
+  }
+
+  .enquiry-glow-two {
+    right: -100px;
+    bottom: 5%;
+    background: #facc15;
+    animation-delay: -3s;
+  }
+
+  /* Modal entrance */
+  .enquiry-card {
+    transform-style: preserve-3d;
+    animation: cardEnter .65s cubic-bezier(.2,.8,.2,1) both;
+    box-shadow: 0 30px 100px rgba(0,0,0,.35),
+                0 0 0 1px rgba(255,255,255,.4);
+  }
+
+  @keyframes cardEnter {
+    from {
+      opacity: 0;
+      transform: perspective(1200px) rotateX(12deg)
+                 rotateY(-5deg) translateY(45px) scale(.88);
+    }
+    to {
+      opacity: 1;
+      transform: perspective(1200px) rotateX(0)
+                 rotateY(0) translateY(0) scale(1);
+    }
+  }
+
+  @keyframes glowDrift {
+    from { transform: translate3d(0,0,0) scale(.9); }
+    to { transform: translate3d(35px,-25px,0) scale(1.15); }
+  }
+
+  .brand-icon {
+    background: linear-gradient(145deg,#facc15,#f59e0b);
+    transform: rotate(-5deg);
+    transition: transform .35s ease;
+  }
+
+  .brand-icon:hover {
+    transform: rotate(5deg) translateY(-4px) scale(1.08);
+  }
+
+  .heading-gradient {
+    display: block;
+    background: linear-gradient(100deg,#2563eb 0%,#7c3aed 50%,#d97706 100%);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradientMove 5s linear infinite;
+  }
+
+  @keyframes gradientMove {
+    to { background-position: 200% center; }
+  }
+
+  .floating-book {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    font-size: 32px;
+    filter: drop-shadow(0 8px 8px #0f172a20);
+    animation: floatBook 4s ease-in-out infinite;
+  }
+
+  .book-one {
+    right: 76px;
+    top: 55px;
+    transform: rotate(12deg);
+  }
+
+  .book-two {
+    right: 30px;
+    top: 110px;
+    font-size: 25px;
+    animation-delay: -2s;
+  }
+
+  @keyframes floatBook {
+    0%,100% { translate: 0 0; rotate: -5deg; }
+    50% { translate: 0 -10px; rotate: 7deg; }
+  }
+
+  .mini-feature {
+    display: flex;
+    min-height: 68px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid #e0eaff;
+    border-radius: 14px;
+    background: linear-gradient(145deg,#eff6ff,#fff);
+    color: #1e3a8a;
+    font-size: 19px;
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+
+  .mini-feature span {
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .mini-feature:hover {
+    transform: translateY(-5px) rotateX(5deg);
+    box-shadow: 0 10px 20px #1e3a8a15;
+  }
+
+  .enquiry-input {
+    box-shadow: 0 2px 5px #0f172a05;
+  }
+
+  .enquiry-input:focus {
+    box-shadow: 0 8px 20px #2563eb12;
+  }
+
+  .whatsapp-3d {
+    background: linear-gradient(135deg,#16a34a,#059669);
+    box-shadow: 0 6px 0 #047857, 0 12px 24px #05966930;
+  }
+
+  .whatsapp-3d:hover {
+    box-shadow: 0 8px 0 #047857, 0 18px 30px #05966940;
+  }
+
+  .whatsapp-3d:active {
+    box-shadow: 0 2px 0 #047857, 0 4px 10px #05966920;
+  }
+
+  .button-shine {
+    position: absolute;
+    top: -100%;
+    left: -50%;
+    width: 30%;
+    height: 300%;
+    transform: rotate(25deg);
+    background: #ffffff35;
+    transition: left .6s ease;
+  }
+
+  .whatsapp-3d:hover .button-shine {
+    left: 130%;
+  }
+
+  @media (max-width: 480px) {
+    .enquiry-card {
+      padding: 20px;
+      border-radius: 23px;
+    }
+
+    .floating-book {
+      font-size: 23px;
+      opacity: .7;
+    }
+
+    .book-one { right: 58px; top: 60px; }
+    .book-two { right: 20px; top: 105px; }
+
+    .heading-gradient {
+      font-size: .88em;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .enquiry-card,
+    .enquiry-glow,
+    .floating-book,
+    .heading-gradient {
+      animation: none !important;
+    }
+
+    .enquiry-input,
+    .mini-feature,
+    .whatsapp-3d {
+      transition: none !important;
+    }
+  }
+</style>
+
+<script>
+  function openProductEnquiry(product = '') {
+    const modal = document.getElementById('productEnquiryModal');
+    const select = document.getElementById('enquiryProduct');
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+
+    // Select a category when opened from a product card.
+    select.value = [...select.options].some(
+      option => option.value === product ||
+                option.textContent === product
+    ) ? product : '';
+
+    setTimeout(() => {
+      document.getElementById('enquiryName').focus({
+        preventScroll: true
+      });
+    }, 150);
+  }
+
+  function closeProductEnquiry() {
+    const modal = document.getElementById('productEnquiryModal');
+
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('productEnquiryModal')
+    .addEventListener('click', function(event) {
+      if (event.target === this) closeProductEnquiry();
+    });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') closeProductEnquiry();
+  });
+
+  document.getElementById('productEnquiryForm')
+    .addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('enquiryName').value.trim();
+      const phone = document.getElementById('enquiryPhone').value.trim();
+      const email = document.getElementById('enquiryEmail').value.trim();
+      const product = document.getElementById('enquiryProduct').value;
+      const message = document.getElementById('enquiryMessage').value.trim();
+
+      const whatsappMessage = [
+        'Hello Naveen Book Seller!',
+        '',
+        '📚 PRODUCT ENQUIRY',
+        'Name: ' + name,
+        'Phone: ' + phone,
+        'Email: ' + (email || 'Not provided'),
+        'Category: ' + product,
+        'Message: ' + (message || 'Please share product details and availability.')
+      ].join('\n');
+
+      const whatsappURL =
+        'https://wa.me/918881222660?text=' +
+        encodeURIComponent(whatsappMessage);
+
+      // Open WhatsApp after the user submits the form.
+      window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+      closeProductEnquiry();
+    });
+</script>
+
+<!-- ================= FEATURES STRIP ================= -->
+<section class="relative bg-sky-100/70">
+  <div class="mx-auto grid max-w-7xl grid-cols-2 gap-y-8 px-4 py-10 sm:px-6 lg:grid-cols-4 lg:pr-48">
+    <div class="group flex flex-col items-center text-center lg:border-r lg:border-slate-300">
+      <span class="grid h-14 w-14 place-items-center rounded-full border-2 border-navy text-2xl text-navy transition group-hover:bg-navy group-hover:text-brand">✔</span>
+      <p class="mt-3 text-sm font-bold text-navy">Best Quality<br />Products</p>
+    </div>
+    <div class="group flex flex-col items-center text-center lg:border-r lg:border-slate-300">
+      <span class="grid h-14 w-14 place-items-center rounded-full border-2 border-navy text-2xl transition group-hover:bg-navy">🛍️</span>
+      <p class="mt-3 text-sm font-bold text-navy">Wide Range<br />Under One Roof</p>
+    </div>
+    <div class="group flex flex-col items-center text-center lg:border-r lg:border-slate-300">
+      <span class="grid h-14 w-14 place-items-center rounded-full bg-navy text-2xl font-bold text-white transition group-hover:bg-brand group-hover:text-navy">₹</span>
+      <p class="mt-3 text-sm font-bold text-navy">Affordable<br />Prices</p>
+    </div>
+    <div class="group flex flex-col items-center text-center">
+      <span class="grid h-14 w-14 place-items-center rounded-full border-2 border-navy text-2xl transition group-hover:bg-navy">🎧</span>
+      <p class="mt-3 text-sm font-bold text-navy">Friendly<br />Customer Service</p>
+    </div>
+  </div>
+  <span class="pointer-events-none absolute bottom-0 right-4 hidden text-7xl lg:block">📖🖊📚</span>
+</section>
+
+
+<!-- ================= POPULAR CATEGORIES ================= -->
+<section class="bg-white pb-14">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <p class="flex items-center gap-2 text-xs mt-6 font-semibold text-navy">Featured Products <span class="h-0.5 w-6 bg-navy"></span></p>
+    <h2 class="mt-1 text-3xl font-extrabold text-navy">Our Popular Categories</h2>
+
+    <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+      <a href="#contact" class="group block text-center">
+        <div class="grid h-28 place-items-center overflow-hidden rounded-md bg-gradient-to-br from-sky-200 to-pink-200 text-6xl"><span class="transition-transform duration-300 group-hover:scale-125">📒</span></div>
+        <h3 class="mt-2 text-sm font-semibold text-navy group-hover:text-brand-dark">Stationery</h3>
+        <p class="text-[11px] text-slate-500">Pens, Notebooks, Art Materials &amp; More</p>
+      </a>
+      <a href="#contact" class="group block text-center">
+        <div class="grid h-28 place-items-center overflow-hidden rounded-md bg-gradient-to-br from-orange-200 to-amber-300 text-6xl"><span class="transition-transform duration-300 group-hover:scale-125">🧸</span></div>
+        <h3 class="mt-2 text-sm font-semibold text-navy group-hover:text-brand-dark">Toys</h3>
+        <p class="text-[11px] text-slate-500">For Endless Fun &amp; Imagination</p>
+      </a>
+      <a href="#contact" class="group block text-center">
+        <div class="grid h-28 place-items-center overflow-hidden rounded-md bg-gradient-to-br from-emerald-200 to-teal-300 text-6xl"><span class="transition-transform duration-300 group-hover:scale-125">📚</span></div>
+        <h3 class="mt-2 text-sm font-semibold text-navy group-hover:text-brand-dark">Books</h3>
+        <p class="text-[11px] text-slate-500">Knowledge for a Brighter Future</p>
+      </a>
+      <a href="#contact" class="group block text-center">
+        <div class="grid h-28 place-items-center overflow-hidden rounded-md bg-gradient-to-br from-rose-300 to-yellow-300 text-6xl"><span class="transition-transform duration-300 group-hover:scale-125">👗</span></div>
+        <h3 class="mt-2 text-sm font-semibold text-navy group-hover:text-brand-dark">Poshaks &amp; Jewellery</h3>
+        <p class="text-[11px] text-slate-500">Traditional &amp; Trendy Collection</p>
+      </a>
+      <a href="#contact" class="group block text-center">
+        <div class="grid h-28 place-items-center overflow-hidden rounded-md bg-gradient-to-br from-blue-200 to-slate-300 text-6xl"><span class="transition-transform duration-300 group-hover:scale-125">👔</span></div>
+        <h3 class="mt-2 text-sm font-semibold text-navy group-hover:text-brand-dark">School Dresses</h3>
+        <p class="text-[11px] text-slate-500">Comfortable &amp; Durable</p>
+      </a>
+      <a href="#contact" class="group block text-center">
+        <div class="grid h-28 place-items-center overflow-hidden rounded-md bg-gradient-to-br from-amber-200 to-orange-300 text-6xl"><span class="transition-transform duration-300 group-hover:scale-125">👞</span></div>
+        <h3 class="mt-2 text-sm font-semibold text-navy group-hover:text-brand-dark">School Shoes</h3>
+        <p class="text-[11px] text-slate-500">For Every Step of Success</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= GALLERY SECTION ================= -->
+<section id="gallery" class="relative overflow-hidden bg-gradient-to-br from-sky-50 via-white to-amber-50 py-20 sm:py-24">
+
+  <!-- Background decorations -->
+  <div class="absolute -left-20 top-20 h-64 w-64 rounded-full bg-sky-200/40 blur-3xl"></div>
+  <div class="absolute -right-20 bottom-10 h-64 w-64 rounded-full bg-amber-200/40 blur-3xl"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8">
+
+    <!-- Section Heading -->
+    <div class="mx-auto mb-12 max-w-2xl text-center">
+      <span class="inline-flex items-center gap-2 rounded-full bg-yellow-100 px-5 py-2 text-sm font-bold text-blue-900">
+        <i class="fa-solid fa-images text-yellow-500"></i>
+        Our Colourful Collection
+      </span>
+
+      <h2 class="mt-5 text-3xl font-black tracking-tight text-blue-950 sm:text-4xl lg:text-5xl">
+        Explore Our
+        <span class="text-yellow-500">Gallery</span>
+      </h2>
+
+      <p class="mt-4 text-sm leading-7 text-gray-600 sm:text-base">
+        From books and stationery to toys, school uniforms and footwear,
+        discover everything you need under one roof.
+      </p>
+
+      <div class="mx-auto mt-6 h-1.5 w-24 rounded-full bg-gradient-to-r from-blue-900 via-yellow-400 to-orange-400"></div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Stationery -->
+      <article class="gallery-card group">
+        <div class="gallery-image bg-[url('images/stationary.jpg')]">
+          <div class="gallery-overlay from-blue-950/90 via-blue-900/20 to-transparent"></div>
+
+          <div class="gallery-content">
+            <span class="gallery-badge bg-sky-400 text-blue-950">
+              <i class="fa-solid fa-pen-ruler mr-1"></i> School Essentials
+            </span>
+
+            <h3 class="gallery-title">Stationery</h3>
+            <p class="gallery-description">
+              Pens, notebooks, colours and everyday school supplies.
+            </p>
+
+            <a href="#contact" class="gallery-button">
+              Enquire Now <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <span class="gallery-number">01</span>
+        </div>
+      </article>
+
+      <!-- Toys -->
+      <article class="gallery-card group">
+        <div class="gallery-image bg-[url('images/toys.jpg')]">
+          <div class="gallery-overlay from-pink-950/90 via-pink-900/20 to-transparent"></div>
+
+          <div class="gallery-content">
+            <span class="gallery-badge bg-pink-200 text-pink-950">
+              <i class="fa-solid fa-puzzle-piece mr-1"></i> Fun & Play
+            </span>
+
+            <h3 class="gallery-title">Toys & Games</h3>
+            <p class="gallery-description">
+              Colourful toys and exciting gifts for little ones.
+            </p>
+
+            <a href="#contact" class="gallery-button">
+              Enquire Now <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <span class="gallery-number">02</span>
+        </div>
+      </article>
+
+      <!-- Books -->
+      <article class="gallery-card group">
+        <div class="gallery-image bg-[url('images/books.jpg')]">
+          <div class="gallery-overlay from-emerald-950/90 via-emerald-900/20 to-transparent"></div>
+
+          <div class="gallery-content">
+            <span class="gallery-badge bg-emerald-200 text-emerald-950">
+              <i class="fa-solid fa-book-open mr-1"></i> Knowledge Corner
+            </span>
+
+            <h3 class="gallery-title">Books</h3>
+            <p class="gallery-description">
+              Books and learning materials to inspire young minds.
+            </p>
+
+            <a href="#contact" class="gallery-button">
+              Enquire Now <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <span class="gallery-number">03</span>
+        </div>
+      </article>
+
+      <!-- Poshaks & Jewellery -->
+      <article class="gallery-card group">
+        <div class="gallery-image bg-[url('images/poshaks.jpg')]">
+          <div class="gallery-overlay from-purple-950/90 via-purple-900/20 to-transparent"></div>
+
+          <div class="gallery-content">
+            <span class="gallery-badge bg-purple-200 text-purple-950">
+              <i class="fa-solid fa-gem mr-1"></i> Traditional Collection
+            </span>
+
+            <h3 class="gallery-title">Poshaks & Jewellery</h3>
+            <p class="gallery-description">
+              Traditional poshaks and beautiful jewellery collections.
+            </p>
+
+            <a href="#contact" class="gallery-button">
+              Enquire Now <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <span class="gallery-number">04</span>
+        </div>
+      </article>
+
+      <!-- School Dresses -->
+      <article class="gallery-card group">
+        <div class="gallery-image bg-[url('images/school-dresses.jpg')]">
+          <div class="gallery-overlay from-cyan-950/90 via-cyan-900/20 to-transparent"></div>
+
+          <div class="gallery-content">
+            <span class="gallery-badge bg-cyan-200 text-cyan-950">
+              <i class="fa-solid fa-shirt mr-1"></i> School Wear
+            </span>
+
+            <h3 class="gallery-title">School Dresses</h3>
+            <p class="gallery-description">
+              Comfortable school uniforms for everyday learning.
+            </p>
+
+            <a href="#contact" class="gallery-button">
+              Enquire Now <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <span class="gallery-number">05</span>
+        </div>
+      </article>
+
+      <!-- School Shoes -->
+      <article class="gallery-card group">
+        <div class="gallery-image bg-[url('images/shoes.jpg')]">
+          <div class="gallery-overlay from-amber-950/90 via-amber-900/20 to-transparent"></div>
+
+          <div class="gallery-content">
+            <span class="gallery-badge bg-amber-200 text-amber-950">
+              <i class="fa-solid fa-shoe-prints mr-1"></i> Everyday Comfort
+            </span>
+
+            <h3 class="gallery-title">School Shoes</h3>
+            <p class="gallery-description">
+              Everyday school footwear designed for comfort.
+            </p>
+
+            <a href="#contact" class="gallery-button">
+              Enquire Now <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <span class="gallery-number">06</span>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="mt-12 text-center">
+      <p class="mb-5 text-gray-600">
+        Looking for a particular product? Get in touch with us!
+      </p>
+
+      <a href="#contact"
+         class="inline-flex items-center rounded-full bg-blue-950 px-8 py-4 font-bold text-white shadow-xl transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-blue-950 hover:shadow-yellow-300/50">
+        <i class="fa-brands fa-whatsapp mr-3 text-xl"></i>
+        Contact Naveen Book Seller
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= GALLERY STYLES ================= -->
+<style>
+  .gallery-card {
+    perspective: 1200px;
+  }
+
+  .gallery-image {
+    position: relative;
+    isolation: isolate;
+    min-height: 370px;
+    overflow: hidden;
+    border-radius: 24px;
+    background-color: #172554;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 12px 25px -12px rgba(15, 23, 42, .35);
+    transform-style: preserve-3d;
+    transition:
+      transform .55s cubic-bezier(.2,.8,.2,1),
+      box-shadow .55s ease;
+  }
+
+  .gallery-card:hover .gallery-image {
+    transform: rotateY(-4deg) rotateX(3deg) translateY(-8px);
+    box-shadow: 0 28px 45px -15px rgba(15, 23, 42, .4);
+  }
+
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: linear-gradient(
+      to top,
+      var(--tw-gradient-stops)
+    );
+    transition: opacity .4s ease;
+  }
+
+  .gallery-image::after {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: inherit;
+    content: "";
+    pointer-events: none;
+  }
+
+  .gallery-content {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: 1;
+    padding: 24px;
+    color: white;
+    transform: translateZ(35px);
+    transition: transform .4s ease;
+  }
+
+  .gallery-card:hover .gallery-content {
+    transform: translateZ(55px);
+  }
+
+  .gallery-badge {
+    display: inline-block;
+    margin-bottom: 12px;
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-size: 11px;
+    font-weight: 800;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  }
+
+  .gallery-title {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.2;
+    text-shadow: 0 2px 12px rgba(0,0,0,.25);
+  }
+
+  .gallery-description {
+    margin-top: 9px;
+    max-width: 290px;
+    color: rgba(255,255,255,.9);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .gallery-button {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 18px;
+    border-radius: 999px;
+    background: #facc15;
+    padding: 11px 18px;
+    color: #172554;
+    font-size: 12px;
+    font-weight: 800;
+    transition: all .3s ease;
+  }
+
+  .gallery-button:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+  }
+
+  .gallery-number {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 2;
+    color: white;
+    font-size: 42px;
+    font-weight: 900;
+    opacity: .7;
+    text-shadow: 0 3px 15px rgba(0,0,0,.4);
+    transform: translateZ(25px);
+    transition: all .4s ease;
+  }
+
+  .gallery-card:hover .gallery-number {
+    opacity: 1;
+    transform: translateZ(45px) scale(1.1);
+  }
+
+  @media (max-width: 640px) {
+    .gallery-image {
+      min-height: 340px;
+    }
+
+    .gallery-title {
+      font-size: 23px;
+    }
+
+    .gallery-content {
+      padding: 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gallery-image,
+    .gallery-content,
+    .gallery-number,
+    .gallery-button {
+      transition: none;
+    }
+
+    .gallery-card:hover .gallery-image,
+    .gallery-card:hover .gallery-content {
+      transform: none;
+    }
+  }
+</style>
+
+
+
+<!-- Contact & Enquiry Section -->
+<section id="contact" class="relative overflow-hidden bg-sky-50 py-16 sm:py-20">
+  <div class="absolute -left-20 top-10 h-56 w-56 rounded-full bg-yellow-200/50 blur-3xl"></div>
+  <div class="absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-pink-200/50 blur-3xl"></div>
+
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Heading -->
+    <div class="mx-auto mb-12 max-w-2xl text-center">
+      <span class="inline-flex items-center gap-2 rounded-full bg-yellow-100 px-4 py-2 text-sm font-bold text-blue-900">
+        <i class="fa-solid fa-paper-plane"></i>
+        GET IN TOUCH
+      </span>
+
+      <h2 class="mt-4 text-3xl font-extrabold text-[#082b55] sm:text-5xl">
+        We'd Love to Hear From You!
+      </h2>
+
+      <p class="mt-4 text-sm leading-7 text-gray-600 sm:text-base">
+        Looking for books, stationery, toys or school essentials?
+        Send us an enquiry and let us help you find what you need.
+      </p>
+    </div>
+
+    <div class="grid items-stretch gap-8 lg:grid-cols-5">
+
+      <!-- Contact Information -->
+      <div class="relative overflow-hidden rounded-3xl bg-[#082b55] p-7 text-white shadow-xl sm:p-9 lg:col-span-2">
+        <div class="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-yellow-400/20"></div>
+        <div class="absolute -bottom-16 -left-12 h-48 w-48 rounded-full bg-blue-400/20"></div>
+
+        <div class="relative">
+          <h3 class="text-2xl font-extrabold sm:text-3xl">
+            Contact Details
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-blue-100">
+            Visit our store or contact us for product availability and enquiries.
+          </p>
+
+          <div class="mt-9 space-y-6">
+
+            <!-- Phone -->
+            <a href="tel:8881222660"
+               class="group flex items-start gap-4">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-yellow-400 text-xl text-blue-950 transition group-hover:scale-110">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <div>
+                <p class="text-sm text-blue-200">Call Us</p>
+                <p class="mt-1 font-bold">8881222660</p>
+              </div>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/918881222660"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="group flex items-start gap-4">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-green-500 text-xl transition group-hover:scale-110">
+                <i class="fa-brands fa-whatsapp"></i>
+              </span>
+              <div>
+                <p class="text-sm text-blue-200">WhatsApp</p>
+                <p class="mt-1 font-bold">8881222660</p>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:naveenbookseller72@gmail.com"
+               class="group flex items-start gap-4">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-pink-400 text-xl transition group-hover:scale-110">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <div class="min-w-0">
+                <p class="text-sm text-blue-200">Email Address</p>
+                <p class="mt-1 break-all text-sm font-semibold sm:text-base">
+                  naveenbookseller72@gmail.com
+                </p>
+              </div>
+            </a>
+
+            <!-- Address -->
+            <div class="flex items-start gap-4">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-orange-400 text-xl text-white">
+                <i class="fa-solid fa-location-dot"></i>
+              </span>
+              <div>
+                <p class="text-sm text-blue-200">Our Store</p>
+                <p class="mt-1 font-bold">Bazar Ganj, Aonla (Bly)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-9 border-t border-white/20 pt-6">
+            <p class="text-sm text-blue-100">Contact Person</p>
+            <p class="mt-1 font-bold">Mudit Agarwal</p>
+            <p class="mt-3 text-sm text-blue-100">Proprietor</p>
+            <p class="mt-1 font-bold">Krishna Gopal Agarwal</p>
+          </div>
+
+          <div class="mt-8 flex gap-3 text-2xl">
+            <i class="fa-solid fa-book-open text-yellow-400"></i>
+            <i class="fa-solid fa-pencil text-pink-300"></i>
+            <i class="fa-solid fa-puzzle-piece text-green-300"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enquiry Form -->
+      <div class="rounded-3xl border border-white bg-white p-6 shadow-xl sm:p-9 lg:col-span-3">
+        <h3 class="text-2xl font-extrabold text-[#082b55]">
+          Send Us an Enquiry
+        </h3>
+
+        <p class="mt-2 text-sm text-gray-500">
+          Fill in your details and continue directly to WhatsApp.
+        </p>
+
+        <form id="contactEnquiryForm" class="mt-7 space-y-5">
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="enquiryName"
+                     class="mb-2 block text-sm font-semibold text-gray-700">
+                Your Name *
+              </label>
+              <input id="enquiryName" name="name" type="text"
+                     placeholder="Enter your name"
+                     autocomplete="name"
+                     maxlength="80" required
+                     class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 outline-none transition focus:border-blue-700 focus:bg-white focus:ring-4 focus:ring-blue-100">
+            </div>
+
+            <div>
+              <label for="enquiryPhone"
+                     class="mb-2 block text-sm font-semibold text-gray-700">
+                Phone Number *
+              </label>
+              <input id="enquiryPhone" name="phone" type="tel"
+                     placeholder="Enter mobile number"
+                     autocomplete="tel"
+                     pattern="[0-9+\-\s()]{10,18}"
+                     maxlength="18" required
+                     class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 outline-none transition focus:border-blue-700 focus:bg-white focus:ring-4 focus:ring-blue-100">
+            </div>
+          </div>
+
+          <div>
+            <label for="enquiryEmail"
+                   class="mb-2 block text-sm font-semibold text-gray-700">
+              Email Address
+            </label>
+            <input id="enquiryEmail" name="email" type="email"
+                   placeholder="Enter email address (optional)"
+                   autocomplete="email"
+                   maxlength="120"
+                   class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 outline-none transition focus:border-blue-700 focus:bg-white focus:ring-4 focus:ring-blue-100">
+          </div>
+
+          <div>
+            <label for="enquiryProduct"
+                   class="mb-2 block text-sm font-semibold text-gray-700">
+              Select Product *
+            </label>
+            <select id="enquiryProduct" name="product" required
+                    class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 outline-none transition focus:border-blue-700 focus:bg-white focus:ring-4 focus:ring-blue-100">
+              <option value="">Choose a product category</option>
+              <option>Stationery</option>
+              <option>Toys</option>
+              <option>Books</option>
+              <option>Poshaks & Jewellery</option>
+              <option>School Dresses</option>
+              <option>School Shoes</option>
+              <option>Other / Multiple Products</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="enquiryMessage"
+                   class="mb-2 block text-sm font-semibold text-gray-700">
+              Your Message *
+            </label>
+            <textarea id="enquiryMessage" name="message" rows="4"
+                      placeholder="Tell us which product, size or quantity you need..."
+                      maxlength="1000" required
+                      class="w-full resize-y rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 outline-none transition focus:border-blue-700 focus:bg-white focus:ring-4 focus:ring-blue-100"></textarea>
+          </div>
+
+          <button type="submit"
+                  class="flex w-full items-center justify-center gap-3 rounded-xl bg-[#082b55] px-6 py-4 font-bold text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-green-600 hover:shadow-xl">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            Send Enquiry on WhatsApp
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <p class="text-center text-xs leading-5 text-gray-500">
+            Your enquiry opens in WhatsApp. You will need to press Send there to submit it.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add this script before the closing body tag -->
+<script>
+  document.getElementById('contactEnquiryForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const form = new FormData(this);
+    const name = String(form.get('name') || '').trim();
+    const phone = String(form.get('phone') || '').trim();
+    const email = String(form.get('email') || '').trim();
+    const product = String(form.get('product') || '').trim();
+    const message = String(form.get('message') || '').trim();
+
+    const whatsappMessage = [
+      'Hello Naveen Book Seller! I have a product enquiry.',
+      '',
+      'Name: ' + name,
+      'Phone: ' + phone,
+      'Email: ' + (email || 'Not provided'),
+      'Product: ' + product,
+      'Message: ' + message
+    ].join('\n');
+
+    const whatsappURL =
+      'https://wa.me/918881222660?text=' +
+      encodeURIComponent(whatsappMessage);
+
+    window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+  });
+</script>
+
+</main>
+
+<!-- ================= COLORFUL FAQ SECTION ================= -->
+<section id="faq" class="relative overflow-hidden bg-gradient-to-br from-violet-50 via-pink-50 to-amber-50 py-16 sm:py-20 lg:py-24">
+
+  <!-- Background Decorations -->
+  <div class="absolute -left-20 top-20 h-56 w-56 rounded-full bg-purple-300/30 blur-3xl"></div>
+  <div class="absolute -right-20 bottom-10 h-64 w-64 rounded-full bg-pink-300/30 blur-3xl"></div>
+
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+    <!-- Heading -->
+    <div class="mx-auto mb-12 max-w-2xl text-center sm:mb-16">
+
+      <span class="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-white/80 px-4 py-2 text-sm font-bold text-purple-700 shadow-sm">
+        <i class="fa-solid fa-circle-question text-pink-500"></i>
+        GOT QUESTIONS?
+      </span>
+
+      <h2 class="mt-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+        Frequently Asked
+        <span class="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent">
+          Questions
+        </span>
+      </h2>
+
+      <p class="mx-auto mt-4 max-w-xl text-sm leading-7 text-gray-600 sm:text-base">
+        Find answers to the questions you may have. We’re here to make
+        everything simple, clear, and hassle-free.
+      </p>
+    </div>
+
+    <!-- FAQ Layout -->
+    <div class="grid items-start gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
+
+      <!-- Left Information Card -->
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-violet-600 via-purple-600 to-pink-500 p-7 text-white shadow-2xl shadow-purple-200 sm:p-9">
+
+        <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full border-[25px] border-white/10"></div>
+        <div class="absolute -bottom-12 -left-8 h-36 w-36 rounded-full bg-orange-400/20 blur-xl"></div>
+
+        <div class="relative z-10">
+          <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/20 text-2xl backdrop-blur-sm">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+
+          <h3 class="text-2xl font-extrabold sm:text-3xl">
+            Still have questions?
+          </h3>
+
+          <p class="mt-4 text-sm leading-7 text-purple-100 sm:text-base">
+            Can't find the answer you're looking for? Our team is happy to
+            help you with any questions or concerns.
+          </p>
+
+          <a href="#contact"
+             class="mt-8 inline-flex items-center gap-3 rounded-xl bg-white px-6 py-3.5 font-bold text-purple-700 shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-yellow-300 hover:text-gray-900">
+            Contact Us
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <div class="mt-10 flex items-center gap-3 border-t border-white/20 pt-6">
+            <div class="flex -space-x-2">
+              <span class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-purple-500 bg-orange-300 text-sm text-white">
+                <i class="fa-solid fa-user"></i>
+              </span>
+              <span class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-purple-500 bg-pink-300 text-sm text-white">
+                <i class="fa-solid fa-user"></i>
+              </span>
+              <span class="flex h-9 w-9 items-center justify-center rounded-full border-2 border-purple-500 bg-yellow-300 text-sm text-white">
+                <i class="fa-solid fa-user"></i>
+              </span>
+            </div>
+            <div>
+              <p class="text-sm font-bold">We're here to help!</p>
+              <p class="text-xs text-purple-100">Friendly support, always</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Accordion -->
+      <div class="space-y-4" id="faqAccordion">
+
+        <!-- FAQ 1 -->
+        <div class="faq-item overflow-hidden rounded-2xl border border-purple-100 bg-white shadow-sm transition duration-300 hover:border-purple-300 hover:shadow-lg">
+          <button type="button"
+            class="faq-question flex w-full items-center justify-between gap-4 p-5 text-left sm:p-6"
+            aria-expanded="true">
+            <span class="flex items-start gap-4">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-100 font-extrabold text-purple-700">01</span>
+              <span class="pt-2 font-bold text-gray-800 sm:text-lg">What services do you offer?</span>
+            </span>
+            <span class="faq-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-purple-600 text-white transition-transform">
+              <i class="fa-solid fa-minus"></i>
+            </span>
+          </button>
+          <div class="faq-answer px-5 pb-6 pl-[4.75rem] text-sm leading-7 text-gray-600 sm:pl-[5.5rem] sm:text-base">
+            We offer a range of services designed to meet your needs. Contact us to learn more about our available solutions and how we can help you.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item overflow-hidden rounded-2xl border border-pink-100 bg-white shadow-sm transition duration-300 hover:border-pink-300 hover:shadow-lg">
+          <button type="button"
+            class="faq-question flex w-full items-center justify-between gap-4 p-5 text-left sm:p-6"
+            aria-expanded="false">
+            <span class="flex items-start gap-4">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-pink-100 font-extrabold text-pink-700">02</span>
+              <span class="pt-2 font-bold text-gray-800 sm:text-lg">How can I get started?</span>
+            </span>
+            <span class="faq-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-pink-500 text-white transition-transform">
+              <i class="fa-solid fa-plus"></i>
+            </span>
+          </button>
+          <div class="faq-answer hidden px-5 pb-6 pl-[4.75rem] text-sm leading-7 text-gray-600 sm:pl-[5.5rem] sm:text-base">
+            Getting started is easy! Reach out through our contact form or phone, tell us what you need, and we'll guide you through the next steps.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm transition duration-300 hover:border-orange-300 hover:shadow-lg">
+          <button type="button"
+            class="faq-question flex w-full items-center justify-between gap-4 p-5 text-left sm:p-6"
+            aria-expanded="false">
+            <span class="flex items-start gap-4">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-100 font-extrabold text-orange-700">03</span>
+              <span class="pt-2 font-bold text-gray-800 sm:text-lg">How much do your services cost?</span>
+            </span>
+            <span class="faq-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-orange-500 text-white transition-transform">
+              <i class="fa-solid fa-plus"></i>
+            </span>
+          </button>
+          <div class="faq-answer hidden px-5 pb-6 pl-[4.75rem] text-sm leading-7 text-gray-600 sm:pl-[5.5rem] sm:text-base">
+            Pricing depends on your requirements and the type of service you choose. Contact us for a personalized quote based on your needs and budget.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-sm transition duration-300 hover:border-blue-300 hover:shadow-lg">
+          <button type="button"
+            class="faq-question flex w-full items-center justify-between gap-4 p-5 text-left sm:p-6"
+            aria-expanded="false">
+            <span class="flex items-start gap-4">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-100 font-extrabold text-blue-700">04</span>
+              <span class="pt-2 font-bold text-gray-800 sm:text-lg">How long does the process take?</span>
+            </span>
+            <span class="faq-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-500 text-white transition-transform">
+              <i class="fa-solid fa-plus"></i>
+            </span>
+          </button>
+          <div class="faq-answer hidden px-5 pb-6 pl-[4.75rem] text-sm leading-7 text-gray-600 sm:pl-[5.5rem] sm:text-base">
+            The timeline depends on the scope and complexity of your requirements. We'll discuss the expected timeline with you before starting.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item overflow-hidden rounded-2xl border border-emerald-100 bg-white shadow-sm transition duration-300 hover:border-emerald-300 hover:shadow-lg">
+          <button type="button"
+            class="faq-question flex w-full items-center justify-between gap-4 p-5 text-left sm:p-6"
+            aria-expanded="false">
+            <span class="flex items-start gap-4">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-100 font-extrabold text-emerald-700">05</span>
+              <span class="pt-2 font-bold text-gray-800 sm:text-lg">How can I contact your team?</span>
+            </span>
+            <span class="faq-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white transition-transform">
+              <i class="fa-solid fa-plus"></i>
+            </span>
+          </button>
+          <div class="faq-answer hidden px-5 pb-6 pl-[4.75rem] text-sm leading-7 text-gray-600 sm:pl-[5.5rem] sm:text-base">
+            You can reach us through the contact section on this website. Send us your enquiry, and we'll get back to you as soon as possible.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Accordion Script -->
+<script>
+  document.querySelectorAll('.faq-question').forEach((button) => {
+    button.addEventListener('click', () => {
+      const currentItem = button.closest('.faq-item');
+      const currentAnswer = currentItem.querySelector('.faq-answer');
+      const currentIcon = button.querySelector('.faq-icon');
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+
+      // Close all FAQs
+      document.querySelectorAll('.faq-item').forEach((item) => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+
+        question.setAttribute('aria-expanded', 'false');
+        answer.classList.add('hidden');
+        icon.innerHTML = '<i class="fa-solid fa-plus"></i>';
+        icon.classList.remove('rotate-180');
+      });
+
+      // Open selected FAQ
+      if (!isOpen) {
+        button.setAttribute('aria-expanded', 'true');
+        currentAnswer.classList.remove('hidden');
+        currentIcon.innerHTML = '<i class="fa-solid fa-minus"></i>';
+      }
+    });
+  });
+</script>
+
+
+<footer id="footer" class="relative overflow-hidden bg-[#03132f] text-white">
+
+  <!-- Main Footer -->
+  <div class="relative mx-auto max-w-[1450px] px-5 pb-10 pt-24 sm:px-8 lg:px-10">
+
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.15fr_1.2fr_.8fr_1fr] lg:gap-8">
+
+      <!-- Brand -->
+      <div class="relative">
+        <div class="flex items-center gap-5">
+          <div class="flex h-24 w-24 shrink-0 items-center justify-center rounded-2xl bg-blue-900/50 text-6xl shadow-lg shadow-blue-950/50">
+            📚
+          </div>
+
+          <div>
+            <p class="mb-1 text-lg font-semibold text-blue-100">
+              Get In Touch
+            </p>
+            <h2 class="text-3xl font-black leading-tight sm:text-4xl">
+              Naveen
+              <span class="block text-amber-400">Book Seller</span>
+            </h2>
+          </div>
+        </div>
+
+        <p class="mt-6 text-sm leading-7 text-blue-100 sm:text-base">
+          We look forward to serving you!
+        </p>
+
+        <div class="mt-3 h-1 w-48 -rotate-3 rounded-full bg-amber-400"></div>
+
+        <p class="mt-8 font-serif text-2xl italic leading-snug text-blue-100">
+          Good Books
+          <br>
+          Build Better
+          <br>
+          Tomorrows
+          <span class="text-amber-400">♡</span>
+        </p>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="space-y-5 lg:border-l lg:border-blue-400/30 lg:pl-7">
+
+        <div class="flex items-center gap-4">
+          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-amber-400 text-xl text-amber-400 transition hover:bg-amber-400 hover:text-[#03132f]">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <p class="text-sm text-blue-200">Contact Person</p>
+            <p class="font-bold sm:text-lg">Mudit Agarwal</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-amber-400 text-xl text-amber-400 transition hover:bg-amber-400 hover:text-[#03132f]">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <div>
+            <p class="text-sm text-blue-200">Proprietor</p>
+            <p class="font-bold sm:text-lg">Krishna Gopal Agarwal</p>
+          </div>
+        </div>
+
+        <div class="border-t border-blue-400/30 pt-5"></div>
+
+        <div class="flex items-center gap-4">
+          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-amber-400 text-xl text-amber-400 transition hover:bg-amber-400 hover:text-[#03132f]">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div>
+            <p class="text-sm text-blue-200">Contact / WhatsApp</p>
+            <a href="tel:8881222660"
+              class="font-bold transition hover:text-amber-400 sm:text-lg">
+              8881222660
+            </a>
+            <a href="https://wa.me/918881222660"
+              target="_blank" rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+              class="ml-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-green-500 text-sm text-white transition hover:scale-110">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-amber-400 text-xl text-amber-400 transition hover:bg-amber-400 hover:text-[#03132f]">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <div class="min-w-0">
+            <p class="text-sm text-blue-200">Email</p>
+            <a href="mailto:naveenbookseller72@gmail.com"
+              class="break-all font-semibold transition hover:text-amber-400">
+              naveenbookseller72@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-amber-400 text-xl text-amber-400 transition hover:bg-amber-400 hover:text-[#03132f]">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <p class="text-sm text-blue-200">Visit Our Store</p>
+            <p class="font-semibold">Bazar Ganj, Aonla (Bly)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="lg:border-l lg:border-blue-400/30 lg:pl-7">
+        <h3 class="text-2xl font-extrabold">Quick Links</h3>
+        <div class="mb-6 mt-3 h-1 w-16 rounded-full bg-amber-400"></div>
+
+        <ul class="space-y-4 text-base sm:text-lg">
+          <li>
+            <a href="index.html" class="group flex items-center gap-3 transition hover:translate-x-1 hover:text-amber-400">
+              <i class="fa-solid fa-angle-right text-amber-400"></i> Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="group flex items-center gap-3 transition hover:translate-x-1 hover:text-amber-400">
+              <i class="fa-solid fa-angle-right text-amber-400"></i> About Us
+            </a>
+          </li>
+          <li>
+            <a href="#products" class="group flex items-center gap-3 transition hover:translate-x-1 hover:text-amber-400">
+              <i class="fa-solid fa-angle-right text-amber-400"></i> Products
+            </a>
+          </li>
+          <li>
+            <a href="#gallery" class="group flex items-center gap-3 transition hover:translate-x-1 hover:text-amber-400">
+              <i class="fa-solid fa-angle-right text-amber-400"></i> Gallery
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="group flex items-center gap-3 transition hover:translate-x-1 hover:text-amber-400">
+              <i class="fa-solid fa-angle-right text-amber-400"></i>Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Illustration / Store Message -->
+      <div class="flex flex-col items-center justify-center text-center lg:border-l lg:border-blue-400/30 lg:pl-7">
+        <p class="font-serif text-4xl italic leading-tight text-white sm:text-5xl">
+          Books,
+          <br>
+          Stationery,
+          <br>
+          Toys & <span class="text-amber-400">More...</span>
+          <span class="text-amber-400">♡</span>
+        </p>
+
+        <div class="relative mt-7 flex items-end justify-center gap-2">
+          <span class="text-8xl drop-shadow-lg transition duration-300 hover:-translate-y-2">📚</span>
+          <span class="mb-1 text-6xl drop-shadow-lg transition duration-300 hover:-translate-y-2">📖</span>
+          <span class="mb-1 text-5xl drop-shadow-lg transition duration-300 hover:-translate-y-2">✏️</span>
+        </div>
+
+        <p class="mt-5 max-w-xs text-sm leading-6 text-blue-200">
+          Everything you need to read, learn, create and grow — all in one place!
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Service Highlights -->
+    <div class="mt-14 grid overflow-hidden rounded-[28px] border border-blue-500/60 bg-[#061a3a]/90 sm:grid-cols-2 lg:grid-cols-4">
+
+      <div class="flex items-center gap-4 p-5 sm:p-6">
+        <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-blue-500 text-3xl text-amber-400">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+        <div>
+          <h4 class="font-bold sm:text-lg">Wide Collection</h4>
+          <p class="mt-1 text-sm text-blue-200">Books for all age groups</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 border-t border-blue-400/20 p-5 sm:border-l sm:p-6 lg:border-t-0">
+        <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-blue-500 text-3xl text-amber-400">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div>
+          <h4 class="font-bold sm:text-lg">Trusted Quality</h4>
+          <p class="mt-1 text-sm text-blue-200">Quality you can trust</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 border-t border-blue-400/20 p-5 sm:p-6 lg:border-l lg:border-t-0">
+        <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-blue-500 text-3xl text-amber-400">
+          <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <div>
+          <h4 class="font-bold sm:text-lg">Friendly Service</h4>
+          <p class="mt-1 text-sm text-blue-200">Here to help you</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 border-t border-blue-400/20 p-5 sm:p-6 lg:border-l lg:border-t-0">
+        <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-blue-500 text-3xl text-amber-400">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <div>
+          <h4 class="font-bold sm:text-lg">Customer Support</h4>
+          <p class="mt-1 text-sm text-blue-200">We're here to help</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-blue-500/50 bg-[#020d22]">
+    <div class="mx-auto flex max-w-[1450px] flex-col items-center justify-between gap-5 px-5 py-7 sm:px-8 md:flex-row lg:px-10">
+
+      <p class="text-center text-sm text-blue-100">
+        © <span id="footerYear">2026</span> Naveen Book Seller. All Rights Reserved.
+      </p>
+
+      <div class="hidden items-center gap-4 font-serif text-2xl italic text-blue-100 lg:flex">
+        <span class="h-px w-20 bg-blue-400"></span>
+        Read <span class="text-amber-400">✦</span>
+        Learn <span class="text-amber-400">✦</span>
+        Grow
+        <span class="h-px w-20 bg-blue-400"></span>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="flex items-center gap-4">
+
+        <a href="#" aria-label="Facebook"
+          class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-xl transition duration-300 hover:-translate-y-1 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/30">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#" aria-label="Instagram"
+          class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-xl transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-500/30">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://wa.me/918881222660"
+          target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+          class="flex h-12 w-12 items-center justify-center rounded-full bg-green-500 text-xl transition duration-300 hover:-translate-y-1 hover:bg-green-400 hover:shadow-lg hover:shadow-green-500/30">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+          aria-label="Back to top"
+          class="ml-2 flex h-12 w-12 items-center justify-center rounded-full border border-blue-500/50 bg-blue-900/70 text-lg transition duration-300 hover:-translate-y-1 hover:bg-amber-400 hover:text-[#03132f]">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<script>
+  // Automatically update the copyright year
+  document.getElementById("footerYear").textContent =
+    new Date().getFullYear();
+</script>
+
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const iconOpen = document.getElementById("iconOpen");
+  const iconClose = document.getElementById("iconClose");
+
+  function closeMenu() {
+    mobileMenu.classList.add("hidden");
+    iconOpen.classList.remove("hidden");
+    iconClose.classList.add("hidden");
+
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.setAttribute("aria-label", "Open navigation menu");
+  }
+
+  menuBtn.addEventListener("click", () => {
+    const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
+
+    if (isOpen) {
+      closeMenu();
+    } else {
+      mobileMenu.classList.remove("hidden");
+      iconOpen.classList.add("hidden");
+      iconClose.classList.remove("hidden");
+
+      menuBtn.setAttribute("aria-expanded", "true");
+      menuBtn.setAttribute("aria-label", "Close navigation menu");
+    }
+  });
+
+  // Close after selecting a mobile navigation link
+  document.querySelectorAll(".mobile-link").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Close using Escape key
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeMenu();
+  });
+
+  // Close dropdown when returning to desktop layout
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) closeMenu();
+  });
+</script>
+
+</body>
+</html>
