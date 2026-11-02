@@ -12,6 +12,8 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 >
+
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
 
@@ -44,11 +46,7 @@
 
 <style>
   body { font-family: 'Poppins', sans-serif; }
-  .hero-bg {
-    background:
-      radial-gradient(circle at 20% 30%, rgba(255,255,255,.95) 0%, rgba(255,255,255,.75) 40%, rgba(255,247,224,.6) 100%),
-      repeating-linear-gradient(90deg, #d9b98a 0 14px, #c9a36e 14px 28px);
-  }
+
   .spine { box-shadow: inset 0 -4px 0 rgba(0,0,0,.15), 0 6px 10px rgba(0,0,0,.18); }
   .spine::after { content:''; position:absolute; right:14px; top:0; bottom:0; width:6px; border-left:2px solid #f6c453; border-right:2px solid #f6c453; opacity:.8; }
   .shelf {
@@ -172,77 +170,493 @@
 </header>
 
 <main>
-<!-- ================= HERO ================= -->
-<section id="home" class="hero-bg relative overflow-hidden">
-  <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-10 sm:px-6 lg:grid-cols-2 lg:py-14">
-    <!-- Left -->
-    <div class="relative z-10">
-      <p class="flex flex-wrap gap-x-2 text-xs font-medium text-slate-600 sm:text-sm">
-        <span>Books</span><span>|</span><span>Stationery</span><span>|</span><span>Toys</span><span>|</span><span>Poshaks &amp; Jewellery</span><span>|</span><span>School Dresses &amp; Shoes</span>
-      </p>
-      <h1 class="mt-3 text-5xl font-extrabold leading-[1.05] text-navy sm:text-6xl lg:text-7xl">
-        Naveen<br /><span class="text-brand">Book Seller</span>
-      </h1>
-      <p class="mt-4 font-script text-2xl font-semibold leading-snug text-navy sm:text-3xl">
-        Your One Stop Shop for Learning,<br />Fun &amp; Everyday Essentials
-      </p>
 
-      <div class="mt-6 grid gap-4 sm:grid-cols-3">
-        <div class="flex items-center gap-3">
-          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-navy text-brand">👤</span>
-          <div class="text-xs leading-tight"><p class="text-slate-500">Contact Person</p><p class="text-sm font-bold text-navy">Mudit Agarwal</p></div>
-        </div>
-        <div class="flex items-center gap-3">
-          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-navy text-brand">👤</span>
-          <div class="text-xs leading-tight"><p class="text-slate-500">Prop.</p><p class="text-sm font-bold text-navy">Krishna Gopal Agarwal</p></div>
-        </div>
-        <div class="flex items-center gap-3">
-          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-navy text-brand">📞</span>
-          <div class="text-xs leading-tight"><p class="text-slate-500">Contact / WhatsApp</p><a href="tel:8881222660" class="text-sm font-bold text-navy hover:text-brand-dark">8881222660</a></div>
-        </div>
-      </div>
 
-      <div class="mt-5 flex flex-col gap-3 text-sm font-semibold text-navy sm:flex-row sm:flex-wrap sm:gap-8">
-        <a href="mailto:naveenbookseller72@gmail.com" class="flex items-center gap-2 transition hover:text-brand-dark break-all">
-          <span class="grid h-8 w-8 shrink-0 place-items-center rounded-md bg-navy text-white">✉</span>naveenbookseller72@gmail.com
-        </a>
-        <span class="flex items-center gap-2">
-          <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-navy text-brand">📍</span>Bazar Ganj Aonla ( Bly)
+<!-- ================= HERO SECTION ================= -->
+
+<section id="home"
+ class="relative isolate overflow-hidden bg-[#fffdf6] bg-cover bg-center"
+ style="background-image:url('images/hero\ bg.png');">
+
+  <!-- LIGHT BACKGROUND OVERLAY -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#fffdf4]/95 via-[#fffdf4]/90 to-white/65"></div>
+
+  <!-- Decorative light effects -->
+  <div class="absolute -top-32 right-0 -z-10 h-96 w-96 rounded-full bg-yellow-200/40 blur-[100px]"></div>
+  <div class="absolute bottom-0 left-0 -z-10 h-80 w-80 rounded-full bg-sky-200/40 blur-[100px]"></div>
+
+  <!-- Background pattern -->
+  <div class="absolute inset-0 -z-10 opacity-[0.12]"
+       style="background-image:radial-gradient(#1e3a8a 1px,transparent 1px);background-size:28px 28px;">
+  </div>
+
+  <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:min-h-[720px] lg:grid-cols-2 lg:gap-8 lg:py-20">
+
+    <!-- ================= LEFT CONTENT ================= -->
+    <div class="relative z-20">
+
+      <!-- Top badge -->
+      <div class="inline-flex items-center gap-2 rounded-full border border-yellow-300/70 bg-white/80 px-4 py-2 shadow-md backdrop-blur-xl">
+        <i class="fa-solid fa-book-open text-yellow-500"></i>
+        <span class="text-xs font-bold tracking-wide text-blue-950 sm:text-sm">
+          A World of Learning & Happiness
         </span>
+        <i class="fa-solid fa-sparkles text-yellow-500"></i>
       </div>
 
-      <a href="#products" class="group mt-7 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-bold text-navy shadow-md transition duration-300 hover:-translate-y-0.5 hover:bg-navy hover:text-brand hover:shadow-xl">
-        Explore Our Products
-        <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
+      <!-- Heading -->
+      <h1 class="mt-7 text-5xl font-black leading-[1.08] tracking-tight text-[#092b54] sm:text-6xl lg:text-[76px]">
 
-    <!-- Right: book stack -->
-    <div class="relative mx-auto w-full max-w-xl lg:max-w-none">
-      <p class="absolute -top-2 right-0 z-20 hidden rotate-[-6deg] text-right font-script text-2xl font-bold leading-tight text-navy sm:block lg:right-4 lg:text-3xl">
-        Quality Products<br />Better Tomorrow <span class="text-brand">♡</span>
+        Welcome to
+
+        <span class="hero-gradient-text block">
+          Naveen Book
+        </span>
+
+        <span class="block text-[#092b54]">
+          Seller
+        </span>
+
+      </h1>
+
+      <!-- Description -->
+      <p class="mt-6 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
+        Your one-stop destination for books, stationery, toys,
+        traditional poshaks, jewellery and school essentials.
+        Everything you need, all under one roof!
       </p>
 
-      <div class="relative mt-10 flex items-end justify-center sm:mt-16">
-        <!-- stack -->
-        <div class="relative z-10 w-[72%] space-y-1">
-          <div class="spine relative h-9 rounded-sm bg-gradient-to-r from-pink-100 to-pink-200 px-4 text-sm font-semibold leading-9 text-pink-300">&nbsp;</div>
-          <div class="spine relative ml-3 h-10 rounded-sm bg-gradient-to-r from-amber-100 to-amber-200 px-4 text-base font-semibold leading-10 text-amber-500">Books</div>
-          <div class="spine relative -ml-1 h-11 rounded-sm bg-gradient-to-r from-sky-500 to-cyan-600 px-4 text-lg font-semibold leading-[44px] text-white transition hover:translate-x-2">Stationery</div>
-          <div class="spine relative ml-2 h-11 rounded-sm bg-gradient-to-r from-orange-500 to-red-500 px-4 text-lg font-semibold leading-[44px] text-white transition hover:translate-x-2">Toys</div>
-          <div class="spine relative -ml-2 h-11 rounded-sm bg-gradient-to-r from-indigo-700 to-purple-700 px-4 text-base font-semibold leading-[44px] text-white transition hover:translate-x-2 sm:text-lg">Poshaks &amp; Jewellery</div>
-          <div class="spine relative ml-1 h-12 rounded-sm bg-gradient-to-r from-indigo-800 to-blue-900 px-4 text-base font-semibold leading-[48px] text-white transition hover:translate-x-2 sm:text-lg">School Dresses &amp; Shoes</div>
-        </div>
-        <!-- pencils + bear -->
-        <div class="absolute bottom-0 right-0 z-20 flex items-end sm:right-2">
-          <span class="mb-6 text-6xl drop-shadow-lg sm:text-7xl">✏️</span>
-          <span class="animate-float text-[7rem] leading-none drop-shadow-xl sm:text-[9rem]">🧸</span>
-        </div>
+      <!-- Product tags -->
+      <div class="mt-6 flex flex-wrap gap-2">
+
+        <span class="hero-tag">
+          <i class="fa-solid fa-book text-blue-700"></i> Books
+        </span>
+
+        <span class="hero-tag">
+          <i class="fa-solid fa-pen-ruler text-orange-500"></i> Stationery
+        </span>
+
+        <span class="hero-tag">
+          <i class="fa-solid fa-puzzle-piece text-pink-500"></i> Toys
+        </span>
+
+        <span class="hero-tag">
+          <i class="fa-solid fa-gem text-purple-500"></i> Poshaks & Jewellery
+        </span>
+
+        <span class="hero-tag">
+          <i class="fa-solid fa-shirt text-sky-600"></i> School Wear
+        </span>
+
       </div>
+
+      <!-- Business details -->
+      <div class="mt-8 grid gap-4 sm:grid-cols-2">
+
+        <div class="hero-info">
+          <div class="hero-info-icon">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <div>
+            <p class="text-xs text-slate-500">Contact Person</p>
+            <p class="font-bold text-blue-950">Mudit Agarwal</p>
+          </div>
+        </div>
+
+        <div class="hero-info">
+          <div class="hero-info-icon">
+            <i class="fa-solid fa-user-check"></i>
+          </div>
+          <div>
+            <p class="text-xs text-slate-500">Proprietor</p>
+            <p class="font-bold text-blue-950">Krishna Gopal Agarwal</p>
+          </div>
+        </div>
+
+        <div class="hero-info">
+          <div class="hero-info-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div>
+            <p class="text-xs text-slate-500">Call / WhatsApp</p>
+            <a href="tel:8881222660" class="font-bold text-blue-950 hover:text-yellow-600">
+              8881222660
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-info">
+          <div class="hero-info-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <p class="text-xs text-slate-500">Our Location</p>
+            <p class="font-bold text-blue-950">Bazar Ganj, Aonla (Bly)</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Email -->
+      <a href="mailto:naveenbookseller72@gmail.com"
+         class="mt-5 inline-flex max-w-full items-center gap-3 break-all text-sm font-semibold text-slate-600 transition hover:text-blue-800">
+        <i class="fa-solid fa-envelope text-lg text-yellow-500"></i>
+        naveenbookseller72@gmail.com
+      </a>
+
+      <!-- CTA -->
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+
+        <a href="#products"
+           class="hero-main-btn group">
+          Explore Products
+          <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-2"></i>
+        </a>
+
+        <a href="https://wa.me/918881222660?text=Hello%20Naveen%20Book%20Seller%2C%20I%20want%20to%20enquire%20about%20your%20products."
+           target="_blank"
+           rel="noopener"
+           class="hero-second-btn">
+          <i class="fa-brands fa-whatsapp text-xl text-green-600"></i>
+          Enquire Now
+        </a>
+
+      </div>
+
+      <!-- Bottom highlights -->
+      <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 border-t border-blue-100 pt-6">
+
+        <div class="flex items-center gap-2 text-sm font-semibold text-slate-700">
+          <i class="fa-solid fa-award text-yellow-500 text-xl"></i>
+          Quality Products
+        </div>
+
+        <div class="flex items-center gap-2 text-sm font-semibold text-slate-700">
+          <i class="fa-solid fa-tags text-yellow-500 text-xl"></i>
+          Great Variety
+        </div>
+
+        <div class="flex items-center gap-2 text-sm font-semibold text-slate-700">
+          <i class="fa-solid fa-heart text-yellow-500 text-xl"></i>
+          Customer Care
+        </div>
+
+      </div>
+
     </div>
+
+
+    <!-- ================= RIGHT 3D SHOWCASE ================= -->
+    <div class="relative mx-auto w-full max-w-[560px]">
+
+      <!-- Decorative circles -->
+      <div class="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-yellow-400/30 sm:h-[460px] sm:w-[460px]"></div>
+
+      <div class="absolute left-1/2 top-1/2 h-[290px] w-[290px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-300/40 sm:h-[390px] sm:w-[390px]"></div>
+
+      <div class="absolute left-1/2 top-1/2 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-yellow-200/40 blur-3xl sm:h-[350px] sm:w-[350px]"></div>
+
+
+      <!-- Main showcase card -->
+      <div class="hero-3d-scene relative z-10 mx-auto aspect-square w-full max-w-[480px]">
+
+        <div class="hero-main-visual absolute inset-[7%] overflow-hidden rounded-[35px] border border-white/80 bg-gradient-to-br from-white via-amber-50 to-sky-100 shadow-[0_30px_80px_rgba(30,58,138,0.20)]">
+
+          <!-- Main image -->
+          <img
+            src="images/books.jpg"
+            alt="Books collection at Naveen Book Seller"
+            class="h-full w-full object-cover transition duration-700 hover:scale-110"
+          />
+
+          <!-- Image overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-blue-950/80 via-transparent to-white/10"></div>
+
+          <!-- Image title -->
+          <div class="absolute bottom-7 left-6 right-6 text-white">
+            <span class="inline-flex rounded-full bg-yellow-400 px-4 py-2 text-xs font-extrabold text-blue-950">
+              <i class="fa-solid fa-star mr-2"></i> Our Collection
+            </span>
+
+            <h2 class="mt-3 text-2xl font-black sm:text-3xl">
+              Learn. Play. Grow.
+            </h2>
+
+            <p class="mt-2 text-sm text-white/90">
+              Everything for your everyday essentials.
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- Floating stationery card -->
+        <div class="hero-float-card absolute -left-2 top-[12%] z-20 w-[145px] overflow-hidden rounded-2xl border border-white bg-white p-2 shadow-2xl sm:-left-8 sm:w-[175px]">
+
+          <img src="images/stationary.jpg"
+               alt="Colourful stationery"
+               class="h-24 w-full rounded-xl object-cover sm:h-28">
+
+          <div class="px-2 py-2">
+            <p class="text-sm font-extrabold text-blue-950">
+              Stationery
+            </p>
+            <p class="text-[10px] text-slate-500">
+              Creative Essentials
+            </p>
+          </div>
+
+          <span class="absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full bg-yellow-400 text-blue-950 shadow-lg">
+            <i class="fa-solid fa-pencil"></i>
+          </span>
+        </div>
+
+
+        <!-- Floating toys card -->
+        <div class="hero-float-card hero-float-delay absolute -right-2 top-[47%] z-20 w-[135px] overflow-hidden rounded-2xl border border-white bg-white p-2 shadow-2xl sm:-right-7 sm:w-[165px]">
+
+          <img src="images/toys.jpg"
+               alt="Toys and games"
+               class="h-24 w-full rounded-xl object-cover sm:h-28">
+
+          <div class="px-2 py-2">
+            <p class="text-sm font-extrabold text-blue-950">
+              Toys & Games
+            </p>
+            <p class="text-[10px] text-slate-500">
+              Fun for Everyone
+            </p>
+          </div>
+
+          <span class="absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full bg-pink-100 text-pink-600 shadow-lg">
+            <i class="fa-solid fa-puzzle-piece"></i>
+          </span>
+        </div>
+
+
+        <!-- Top floating icon -->
+        <div class="hero-icon-float absolute right-[15%] top-0 z-20 grid h-14 w-14 place-items-center rounded-2xl border border-white bg-yellow-300 text-2xl text-blue-950 shadow-xl sm:h-16 sm:w-16">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <!-- Bottom floating icon -->
+        <div class="hero-icon-float hero-float-delay absolute bottom-[5%] left-[15%] z-20 grid h-14 w-14 place-items-center rounded-2xl border border-white bg-sky-200 text-2xl text-blue-900 shadow-xl sm:h-16 sm:w-16">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+      </div>
+
+
+      <!-- Bottom trust card -->
+      <div class="relative z-20 mx-auto -mt-1 flex max-w-[370px] items-center gap-4 rounded-2xl border border-white bg-white/90 p-4 shadow-[0_15px_40px_rgba(15,23,42,.13)] backdrop-blur-xl">
+
+        <div class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-yellow-100 text-xl text-yellow-600">
+          <i class="fa-solid fa-store"></i>
+        </div>
+
+        <div>
+          <p class="font-extrabold text-blue-950">
+            Everything Under One Roof
+          </p>
+          <p class="mt-1 text-xs text-slate-500">
+            Visit us at Bazar Ganj, Aonla (Bly)
+          </p>
+        </div>
+
+        <i class="fa-solid fa-circle-check ml-auto text-xl text-green-500"></i>
+
+      </div>
+
+    </div>
+
   </div>
 </section>
 
+
+<!-- ================= CUSTOM 3D CSS ================= -->
+<style>
+
+  .hero-gradient-text {
+    background: linear-gradient(110deg,#e7a900 0%,#facc15 45%,#f59e0b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid rgba(203,213,225,.7);
+    border-radius: 50px;
+    background: rgba(255,255,255,.75);
+    padding: 9px 13px;
+    color: #1e3a5f;
+    font-size: 11px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(15,23,42,.04);
+    transition: all .3s ease;
+  }
+
+  .hero-tag:hover {
+    transform: translateY(-4px);
+    background: #facc15;
+    border-color: #facc15;
+    box-shadow: 0 10px 20px rgba(234,179,8,.2);
+  }
+
+  .hero-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    border: 1px solid rgba(226,232,240,.9);
+    border-radius: 15px;
+    background: rgba(255,255,255,.75);
+    padding: 12px;
+    box-shadow: 0 5px 15px rgba(15,23,42,.04);
+    backdrop-filter: blur(10px);
+    transition: all .3s ease;
+  }
+
+  .hero-info:hover {
+    transform: translateY(-5px);
+    border-color: #facc15;
+    box-shadow: 0 12px 25px rgba(30,58,138,.10);
+  }
+
+  .hero-info-icon {
+    display: grid;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    place-items: center;
+    border-radius: 12px;
+    background: #102e56;
+    color: #facc15;
+    font-size: 17px;
+    transition: all .3s ease;
+  }
+
+  .hero-info:hover .hero-info-icon {
+    transform: rotateY(180deg);
+    background: #facc15;
+    color: #102e56;
+  }
+
+  .hero-main-btn {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50px;
+    background: linear-gradient(135deg,#facc15,#f59e0b);
+    padding: 15px 25px;
+    color: #102e56;
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 12px 25px rgba(234,179,8,.25);
+    transition: all .35s ease;
+  }
+
+  .hero-main-btn:hover {
+    transform: translateY(-5px);
+    background: #102e56;
+    color: white;
+    box-shadow: 0 18px 30px rgba(15,23,42,.2);
+  }
+
+  .hero-second-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #dbe3ef;
+    border-radius: 50px;
+    background: rgba(255,255,255,.85);
+    padding: 14px 23px;
+    color: #102e56;
+    font-size: 14px;
+    font-weight: 800;
+    transition: all .3s ease;
+  }
+
+  .hero-second-btn:hover {
+    transform: translateY(-5px);
+    border-color: #16a34a;
+    box-shadow: 0 12px 25px rgba(22,163,74,.12);
+  }
+
+  .hero-3d-scene {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+  }
+
+  .hero-main-visual {
+    transform: rotateY(-8deg) rotateX(4deg);
+    transition: transform .6s ease, box-shadow .6s ease;
+  }
+
+  .hero-3d-scene:hover .hero-main-visual {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.025);
+    box-shadow: 0 40px 80px rgba(30,58,138,.28);
+  }
+
+  .hero-float-card {
+    transform: translateZ(65px) rotateY(-8deg);
+    animation: heroFloat 4s ease-in-out infinite;
+    transition: box-shadow .3s ease;
+  }
+
+  .hero-float-card:hover {
+    box-shadow: 0 25px 45px rgba(15,23,42,.25);
+  }
+
+  .hero-float-delay {
+    animation-delay: 1.5s;
+  }
+
+  .hero-icon-float {
+    animation: heroFloat 3.5s ease-in-out infinite;
+  }
+
+  @keyframes heroFloat {
+    0%,100% {
+      transform: translateY(0) translateZ(45px) rotateY(-8deg);
+    }
+    50% {
+      transform: translateY(-13px) translateZ(65px) rotateY(5deg);
+    }
+  }
+
+  @media(max-width:640px) {
+    .hero-3d-scene {
+      max-width: 380px;
+    }
+
+    .hero-main-visual {
+      transform: none;
+    }
+
+    .hero-float-card {
+      transform: none;
+    }
+  }
+
+  @media(prefers-reduced-motion:reduce) {
+    .hero-float-card,
+    .hero-icon-float {
+      animation: none;
+    }
+
+    .hero-main-visual,
+    .hero-info,
+    .hero-tag,
+    .hero-main-btn,
+    .hero-second-btn {
+      transition: none;
+    }
+  }
+
+</style>
 
 
 <!-- ================= PREMIUM 3D ABOUT SECTION ================= -->
@@ -318,7 +732,7 @@
       </div>
 
       <!-- Floating quality badge -->
-      <div class="float-slow absolute -bottom-4 left-2 z-20 rounded-xl border border-white bg-white/95 px-3 py-2 shadow-lg sm:bottom-3 sm:left-0 sm:px-4 sm:py-3">
+      <div class="float-slow absolute -bottom-6 left-2 z-20 rounded-xl border border-white bg-white/95 px-3 py-2 shadow-lg sm:bottom-3 sm:left-0 sm:px-4 sm:py-3">
         <p class="text-xs font-extrabold text-slate-800 sm:text-sm">💛 Made for Every Age</p>
       </div>
     </div>
@@ -333,7 +747,7 @@
       </div>
 
       <h2 class="text-3xl font-black leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-        Welcome to
+        About Us
         <span class="about-heading block bg-gradient-to-r from-amber-600 via-orange-500 to-amber-700 bg-clip-text text-transparent">
           Naveen Book Seller
         </span>
@@ -919,7 +1333,7 @@
       <article id="stationery" class="group relative overflow-hidden rounded-3xl border border-blue-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:border-blue-300 hover:shadow-2xl">
         <div class="relative h-60 overflow-hidden bg-blue-100">
           <img
-            src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=85"
+            src="images/stationary01.jpg"
             alt="Stationery and writing supplies"
             loading="lazy"
             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -940,7 +1354,7 @@
       <article id="toys" class="group relative overflow-hidden rounded-3xl border border-pink-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:border-pink-300 hover:shadow-2xl">
         <div class="relative h-60 overflow-hidden bg-pink-100">
           <img
-            src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?auto=format&fit=crop&w=900&q=85"
+            src="images/toys01.avif"
             alt="Colourful toys and building blocks"
             loading="lazy"
             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -961,7 +1375,7 @@
       <article id="books" class="group relative overflow-hidden rounded-3xl border border-emerald-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:border-emerald-300 hover:shadow-2xl">
         <div class="relative h-60 overflow-hidden bg-emerald-100">
           <img
-            src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=85"
+            src="images/books01.avif"
             alt="Bookshelves filled with books"
             loading="lazy"
             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -982,7 +1396,7 @@
       <article id="poshaks" class="group relative overflow-hidden rounded-3xl border border-purple-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:border-purple-300 hover:shadow-2xl">
         <div class="relative h-60 overflow-hidden bg-purple-100">
           <img
-            src="https://images.unsplash.com/photo-1603400521630-9f2de124b33b?auto=format&fit=crop&w=900&q=85"
+            src="images/poshak01.jpg"
             alt="Traditional clothing and fashion accessories"
             loading="lazy"
             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -1003,7 +1417,7 @@
       <article id="dresses" class="group relative overflow-hidden rounded-3xl border border-cyan-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:border-cyan-300 hover:shadow-2xl">
         <div class="relative h-60 overflow-hidden bg-cyan-100">
           <img
-            src="https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=900&q=85"
+            src="images/uniform02.jpg"
             alt="School clothing and uniforms"
             loading="lazy"
             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -1024,7 +1438,7 @@
       <article id="shoes" class="group relative overflow-hidden rounded-3xl border border-orange-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-3 hover:border-orange-300 hover:shadow-2xl">
         <div class="relative h-60 overflow-hidden bg-orange-100">
           <img
-            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
+            src="images/school shoes01.jpg"
             alt="Footwear collection"
             loading="lazy"
             class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -1143,7 +1557,7 @@
               class="mb-2 block text-xs font-bold text-slate-700">
               Your Name *
             </label>
-            <input id="enquiryName" type="text"
+            <input id="enquiryName" name="name" type="text"
               placeholder="Enter your name" autocomplete="name"
               required
               class="enquiry-input w-full rounded-xl border
@@ -1158,7 +1572,7 @@
               class="mb-2 block text-xs font-bold text-slate-700">
               Phone Number *
             </label>
-            <input id="enquiryPhone" type="tel"
+            <input id="enquiryPhone" name="phone" type="tel"
               placeholder="Your phone number"
               autocomplete="tel"
               pattern="[0-9+() -]{7,20}" required
@@ -1175,7 +1589,7 @@
             class="mb-2 block text-xs font-bold text-slate-700">
             Email Address <span class="font-normal text-slate-400">(Optional)</span>
           </label>
-          <input id="enquiryEmail" type="email"
+          <input id="enquiryEmail" name="email" type="email"
             placeholder="you@example.com" autocomplete="email"
             class="enquiry-input w-full rounded-xl border
                    border-slate-200 bg-white px-4 py-3.5
@@ -1189,7 +1603,7 @@
             class="mb-2 block text-xs font-bold text-slate-700">
             What Are You Looking For? *
           </label>
-          <select id="enquiryProduct" required
+          <select id="enquiryProduct" name="product" required
             class="enquiry-input w-full appearance-none rounded-xl
                    border border-slate-200 bg-white px-4 py-3.5
                    text-sm outline-none transition-all duration-300
@@ -1211,7 +1625,7 @@
             class="mb-2 block text-xs font-bold text-slate-700">
             Your Message
           </label>
-          <textarea id="enquiryMessage" rows="3"
+          <textarea id="enquiryMessage" name="message" rows="3"
             placeholder="Product name, quantity, class or size..."
             class="enquiry-input w-full resize-y rounded-xl border
                    border-slate-200 bg-white px-4 py-3.5
@@ -1722,7 +2136,7 @@
 
       <!-- School Dresses -->
       <article class="gallery-card group">
-        <div class="gallery-image bg-[url('images/school-dresses.jpg')]">
+        <div class="gallery-image bg-[url('images/dresses.jpg')]">
           <div class="gallery-overlay from-cyan-950/90 via-cyan-900/20 to-transparent"></div>
 
           <div class="gallery-content">
@@ -1776,7 +2190,7 @@
         Looking for a particular product? Get in touch with us!
       </p>
 
-      <a href="#contact"
+      <a href="tel:8881222660"
          class="inline-flex items-center rounded-full bg-blue-950 px-8 py-4 font-bold text-white shadow-xl transition duration-300 hover:-translate-y-1 hover:bg-yellow-400 hover:text-blue-950 hover:shadow-yellow-300/50">
         <i class="fa-brands fa-whatsapp mr-3 text-xl"></i>
         Contact Naveen Book Seller
@@ -2147,7 +2561,7 @@
   </div>
 </section>
 
-<!-- Add this script before the closing body tag -->
+
 <script>
   document.getElementById('contactEnquiryForm').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -2625,7 +3039,7 @@
           <i class="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a href="#" aria-label="Instagram"
+        <a href="https://www.instagram.com/naveenbookseller72?rpxt=NTNycHBvcDBwcjk3" aria-label="Instagram"
           class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 text-xl transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-500/30">
           <i class="fa-brands fa-instagram"></i>
         </a>
